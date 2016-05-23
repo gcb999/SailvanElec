@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		907F80FD1CF2F6890023F98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FC1CF2F6890023F98B /* main.m */; };
+		907F81001CF2F6890023F98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FF1CF2F6890023F98B /* AppDelegate.m */; };
+		907F81031CF2F6890023F98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81021CF2F6890023F98B /* ViewController.m */; };
+		907F81061CF2F6890023F98B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 907F81041CF2F6890023F98B /* Main.storyboard */; };
+		907F81081CF2F6890023F98B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 907F81071CF2F6890023F98B /* Assets.xcassets */; };
+		907F810B1CF2F6890023F98B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 907F81091CF2F6890023F98B /* LaunchScreen.storyboard */; };
+		907F81161CF2F6890023F98B /* SailvanElecTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81151CF2F6890023F98B /* SailvanElecTests.m */; };
+		907F81211CF2F6890023F98B /* SailvanElecUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81201CF2F6890023F98B /* SailvanElecUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		907F81121CF2F6890023F98B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 907F80F01CF2F6890023F98B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 907F80F71CF2F6890023F98B;
+			remoteInfo = SailvanElec;
+		};
+		907F811D1CF2F6890023F98B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 907F80F01CF2F6890023F98B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 907F80F71CF2F6890023F98B;
+			remoteInfo = SailvanElec;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		907F80F81CF2F6890023F98B /* SailvanElec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SailvanElec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		907F80FC1CF2F6890023F98B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		907F80FE1CF2F6890023F98B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		907F80FF1CF2F6890023F98B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		907F81011CF2F6890023F98B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		907F81021CF2F6890023F98B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		907F81051CF2F6890023F98B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		907F81071CF2F6890023F98B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		907F810A1CF2F6890023F98B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		907F810C1CF2F6890023F98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		907F81111CF2F6890023F98B /* SailvanElecTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SailvanElecTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		907F81151CF2F6890023F98B /* SailvanElecTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SailvanElecTests.m; sourceTree = "<group>"; };
+		907F81171CF2F6890023F98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		907F811C1CF2F6890023F98B /* SailvanElecUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SailvanElecUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		907F81201CF2F6890023F98B /* SailvanElecUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SailvanElecUITests.m; sourceTree = "<group>"; };
+		907F81221CF2F6890023F98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		907F80F51CF2F6890023F98B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907F810E1CF2F6890023F98B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907F81191CF2F6890023F98B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		907F80EF1CF2F6890023F98B = {
+			isa = PBXGroup;
+			children = (
+				907F80FA1CF2F6890023F98B /* SailvanElec */,
+				907F81141CF2F6890023F98B /* SailvanElecTests */,
+				907F811F1CF2F6890023F98B /* SailvanElecUITests */,
+				907F80F91CF2F6890023F98B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		907F80F91CF2F6890023F98B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				907F80F81CF2F6890023F98B /* SailvanElec.app */,
+				907F81111CF2F6890023F98B /* SailvanElecTests.xctest */,
+				907F811C1CF2F6890023F98B /* SailvanElecUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		907F80FA1CF2F6890023F98B /* SailvanElec */ = {
+			isa = PBXGroup;
+			children = (
+				907F80FE1CF2F6890023F98B /* AppDelegate.h */,
+				907F80FF1CF2F6890023F98B /* AppDelegate.m */,
+				907F81011CF2F6890023F98B /* ViewController.h */,
+				907F81021CF2F6890023F98B /* ViewController.m */,
+				907F81041CF2F6890023F98B /* Main.storyboard */,
+				907F81071CF2F6890023F98B /* Assets.xcassets */,
+				907F81091CF2F6890023F98B /* LaunchScreen.storyboard */,
+				907F810C1CF2F6890023F98B /* Info.plist */,
+				907F80FB1CF2F6890023F98B /* Supporting Files */,
+			);
+			path = SailvanElec;
+			sourceTree = "<group>";
+		};
+		907F80FB1CF2F6890023F98B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				907F80FC1CF2F6890023F98B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		907F81141CF2F6890023F98B /* SailvanElecTests */ = {
+			isa = PBXGroup;
+			children = (
+				907F81151CF2F6890023F98B /* SailvanElecTests.m */,
+				907F81171CF2F6890023F98B /* Info.plist */,
+			);
+			path = SailvanElecTests;
+			sourceTree = "<group>";
+		};
+		907F811F1CF2F6890023F98B /* SailvanElecUITests */ = {
+			isa = PBXGroup;
+			children = (
+				907F81201CF2F6890023F98B /* SailvanElecUITests.m */,
+				907F81221CF2F6890023F98B /* Info.plist */,
+			);
+			path = SailvanElecUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		907F80F71CF2F6890023F98B /* SailvanElec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 907F81251CF2F6890023F98B /* Build configuration list for PBXNativeTarget "SailvanElec" */;
+			buildPhases = (
+				907F80F41CF2F6890023F98B /* Sources */,
+				907F80F51CF2F6890023F98B /* Frameworks */,
+				907F80F61CF2F6890023F98B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SailvanElec;
+			productName = SailvanElec;
+			productReference = 907F80F81CF2F6890023F98B /* SailvanElec.app */;
+			productType = "com.apple.product-type.application";
+		};
+		907F81101CF2F6890023F98B /* SailvanElecTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 907F81281CF2F6890023F98B /* Build configuration list for PBXNativeTarget "SailvanElecTests" */;
+			buildPhases = (
+				907F810D1CF2F6890023F98B /* Sources */,
+				907F810E1CF2F6890023F98B /* Frameworks */,
+				907F810F1CF2F6890023F98B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				907F81131CF2F6890023F98B /* PBXTargetDependency */,
+			);
+			name = SailvanElecTests;
+			productName = SailvanElecTests;
+			productReference = 907F81111CF2F6890023F98B /* SailvanElecTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		907F811B1CF2F6890023F98B /* SailvanElecUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 907F812B1CF2F6890023F98B /* Build configuration list for PBXNativeTarget "SailvanElecUITests" */;
+			buildPhases = (
+				907F81181CF2F6890023F98B /* Sources */,
+				907F81191CF2F6890023F98B /* Frameworks */,
+				907F811A1CF2F6890023F98B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				907F811E1CF2F6890023F98B /* PBXTargetDependency */,
+			);
+			name = SailvanElecUITests;
+			productName = SailvanElecUITests;
+			productReference = 907F811C1CF2F6890023F98B /* SailvanElecUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		907F80F01CF2F6890023F98B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = com.sailvan.gcb999;
+				TargetAttributes = {
+					907F80F71CF2F6890023F98B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					907F81101CF2F6890023F98B = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 907F80F71CF2F6890023F98B;
+					};
+					907F811B1CF2F6890023F98B = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 907F80F71CF2F6890023F98B;
+					};
+				};
+			};
+			buildConfigurationList = 907F80F31CF2F6890023F98B /* Build configuration list for PBXProject "SailvanElec" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 907F80EF1CF2F6890023F98B;
+			productRefGroup = 907F80F91CF2F6890023F98B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				907F80F71CF2F6890023F98B /* SailvanElec */,
+				907F81101CF2F6890023F98B /* SailvanElecTests */,
+				907F811B1CF2F6890023F98B /* SailvanElecUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		907F80F61CF2F6890023F98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907F810B1CF2F6890023F98B /* LaunchScreen.storyboard in Resources */,
+				907F81081CF2F6890023F98B /* Assets.xcassets in Resources */,
+				907F81061CF2F6890023F98B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907F810F1CF2F6890023F98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907F811A1CF2F6890023F98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		907F80F41CF2F6890023F98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907F81031CF2F6890023F98B /* ViewController.m in Sources */,
+				907F81001CF2F6890023F98B /* AppDelegate.m in Sources */,
+				907F80FD1CF2F6890023F98B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907F810D1CF2F6890023F98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907F81161CF2F6890023F98B /* SailvanElecTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907F81181CF2F6890023F98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907F81211CF2F6890023F98B /* SailvanElecUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		907F81131CF2F6890023F98B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 907F80F71CF2F6890023F98B /* SailvanElec */;
+			targetProxy = 907F81121CF2F6890023F98B /* PBXContainerItemProxy */;
+		};
+		907F811E1CF2F6890023F98B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 907F80F71CF2F6890023F98B /* SailvanElec */;
+			targetProxy = 907F811D1CF2F6890023F98B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		907F81041CF2F6890023F98B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				907F81051CF2F6890023F98B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		907F81091CF2F6890023F98B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				907F810A1CF2F6890023F98B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		907F81231CF2F6890023F98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		907F81241CF2F6890023F98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		907F81261CF2F6890023F98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SailvanElec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gcb999.SailvanElec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		907F81271CF2F6890023F98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SailvanElec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gcb999.SailvanElec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		907F81291CF2F6890023F98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SailvanElecTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gcb999.SailvanElecTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SailvanElec.app/SailvanElec";
+			};
+			name = Debug;
+		};
+		907F812A1CF2F6890023F98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SailvanElecTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gcb999.SailvanElecTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SailvanElec.app/SailvanElec";
+			};
+			name = Release;
+		};
+		907F812C1CF2F6890023F98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SailvanElecUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gcb999.SailvanElecUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SailvanElec;
+			};
+			name = Debug;
+		};
+		907F812D1CF2F6890023F98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SailvanElecUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gcb999.SailvanElecUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SailvanElec;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		907F80F31CF2F6890023F98B /* Build configuration list for PBXProject "SailvanElec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907F81231CF2F6890023F98B /* Debug */,
+				907F81241CF2F6890023F98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		907F81251CF2F6890023F98B /* Build configuration list for PBXNativeTarget "SailvanElec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907F81261CF2F6890023F98B /* Debug */,
+				907F81271CF2F6890023F98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		907F81281CF2F6890023F98B /* Build configuration list for PBXNativeTarget "SailvanElecTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907F81291CF2F6890023F98B /* Debug */,
+				907F812A1CF2F6890023F98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		907F812B1CF2F6890023F98B /* Build configuration list for PBXNativeTarget "SailvanElecUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907F812C1CF2F6890023F98B /* Debug */,
+				907F812D1CF2F6890023F98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 907F80F01CF2F6890023F98B /* Project object */;
+}
