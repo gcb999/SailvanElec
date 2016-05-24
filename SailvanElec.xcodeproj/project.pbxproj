@@ -91,6 +91,8 @@
 		907F825A1CF3F14F0023F98B /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F82591CF3F14F0023F98B /* JSNavigationController.m */; };
 		907F825D1CF4061A0023F98B /* JSBasicViewController+ThreeDTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F825C1CF4061A0023F98B /* JSBasicViewController+ThreeDTouch.m */; };
 		907F82641CF408090023F98B /* UIViewController+NavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F82631CF408090023F98B /* UIViewController+NavigationItem.m */; };
+		907F826A1CF442D90023F98B /* JSCollectionViewController+UIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F82691CF442D90023F98B /* JSCollectionViewController+UIScrollView.m */; };
+		907F826D1CF44ABE0023F98B /* JSTableViewController+UIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F826C1CF44ABE0023F98B /* JSTableViewController+UIScrollView.m */; };
 		E73931B779A2CC92C0699369 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1040033C81510B872892E2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -302,6 +304,10 @@
 		907F825C1CF4061A0023F98B /* JSBasicViewController+ThreeDTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSBasicViewController+ThreeDTouch.m"; sourceTree = "<group>"; };
 		907F82621CF408090023F98B /* UIViewController+NavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationItem.h"; sourceTree = "<group>"; };
 		907F82631CF408090023F98B /* UIViewController+NavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationItem.m"; sourceTree = "<group>"; };
+		907F82681CF442D90023F98B /* JSCollectionViewController+UIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCollectionViewController+UIScrollView.h"; sourceTree = "<group>"; };
+		907F82691CF442D90023F98B /* JSCollectionViewController+UIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCollectionViewController+UIScrollView.m"; sourceTree = "<group>"; };
+		907F826B1CF44ABE0023F98B /* JSTableViewController+UIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSTableViewController+UIScrollView.h"; sourceTree = "<group>"; };
+		907F826C1CF44ABE0023F98B /* JSTableViewController+UIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSTableViewController+UIScrollView.m"; sourceTree = "<group>"; };
 		B9D40446286FF62DB07406F1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA1040033C81510B872892E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -597,6 +603,8 @@
 				907F816A1CF2F7C10023F98B /* JSCollectionViewController+ThreeDTouch.m */,
 				907F816B1CF2F7C10023F98B /* JSCollectionViewController.h */,
 				907F816C1CF2F7C10023F98B /* JSCollectionViewController.m */,
+				907F82681CF442D90023F98B /* JSCollectionViewController+UIScrollView.h */,
+				907F82691CF442D90023F98B /* JSCollectionViewController+UIScrollView.m */,
 			);
 			path = JSCollectionViewController;
 			sourceTree = "<group>";
@@ -722,6 +730,8 @@
 				907F819A1CF2F7C10023F98B /* JSTableViewController+ThreeDTouch.m */,
 				907F819B1CF2F7C10023F98B /* JSTableViewController.h */,
 				907F819C1CF2F7C10023F98B /* JSTableViewController.m */,
+				907F826B1CF44ABE0023F98B /* JSTableViewController+UIScrollView.h */,
+				907F826C1CF44ABE0023F98B /* JSTableViewController+UIScrollView.m */,
 			);
 			path = JSTableViewController;
 			sourceTree = "<group>";
@@ -1238,6 +1248,7 @@
 				907F82301CF2F7C10023F98B /* UIDevice+Extend.m in Sources */,
 				907F82241CF2F7C10023F98B /* CoreArchive.m in Sources */,
 				907F822D1CF2F7C10023F98B /* NSString+Extend.m in Sources */,
+				907F826A1CF442D90023F98B /* JSCollectionViewController+UIScrollView.m in Sources */,
 				907F81031CF2F6890023F98B /* ViewController.m in Sources */,
 				907F822E1CF2F7C10023F98B /* NSString+Password.m in Sources */,
 				907F824A1CF2F8470023F98B /* MainViewController.m in Sources */,
@@ -1310,6 +1321,7 @@
 				907F80FD1CF2F6890023F98B /* main.m in Sources */,
 				907F82081CF2F7C10023F98B /* JSPayPal.m in Sources */,
 				907F821B1CF2F7C10023F98B /* JSTableViewController+MJRefresh.m in Sources */,
+				907F826D1CF44ABE0023F98B /* JSTableViewController+UIScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
