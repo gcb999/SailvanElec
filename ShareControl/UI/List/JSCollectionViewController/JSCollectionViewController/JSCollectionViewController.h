@@ -123,7 +123,7 @@ static NSString *const JSCollectionFooterIdentifier = @"JSCollectionFooterIdenti
 
 
 
-@protocol JSCollectionViewControllerDelegate <NSObject>
+@protocol JSCollectionViewControllerDelegate <JSCollectionScrollViewDelegate>
 
 // 网络加载
 -(void)JSCollectionViewController:(JSCollectionViewController *)JSCtrl LoadRequestCurrentPage:(NSInteger)currentPage;

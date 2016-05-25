@@ -84,7 +84,7 @@ tableview 集成功能（暂时不考虑分组）
 
 
 
-@protocol JSTableViewControllerDelegate <NSObject>
+@protocol JSTableViewControllerDelegate <JSTableScrollViewDelegate>
 
 
 // 网络加载

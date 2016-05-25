@@ -14,6 +14,8 @@
 		904C38991CF558D3004A8855 /* HYBMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38921CF558D3004A8855 /* HYBMoveTransition.m */; };
 		904C389A1CF558D3004A8855 /* UIViewController+HYBMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38941CF558D3004A8855 /* UIViewController+HYBMoveTransition.m */; };
 		904C389D1CF57812004A8855 /* HomeDetailVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C389C1CF57812004A8855 /* HomeDetailVIewController.m */; };
+		904C38A51CF59338004A8855 /* JSItemImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38A41CF59338004A8855 /* JSItemImageViewController.m */; };
+		904C38A81CF5AC22004A8855 /* JSBigItemImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38A71CF5AC22004A8855 /* JSBigItemImageViewController.m */; };
 		907F80FD1CF2F6890023F98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FC1CF2F6890023F98B /* main.m */; };
 		907F81001CF2F6890023F98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FF1CF2F6890023F98B /* AppDelegate.m */; };
 		907F81031CF2F6890023F98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81021CF2F6890023F98B /* ViewController.m */; };
@@ -136,6 +138,10 @@
 		904C38941CF558D3004A8855 /* UIViewController+HYBMoveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HYBMoveTransition.m"; sourceTree = "<group>"; };
 		904C389B1CF57812004A8855 /* HomeDetailVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailVIewController.h; sourceTree = "<group>"; };
 		904C389C1CF57812004A8855 /* HomeDetailVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailVIewController.m; sourceTree = "<group>"; };
+		904C38A31CF59338004A8855 /* JSItemImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImageViewController.h; sourceTree = "<group>"; };
+		904C38A41CF59338004A8855 /* JSItemImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImageViewController.m; sourceTree = "<group>"; };
+		904C38A61CF5AC22004A8855 /* JSBigItemImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBigItemImageViewController.h; sourceTree = "<group>"; };
+		904C38A71CF5AC22004A8855 /* JSBigItemImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBigItemImageViewController.m; sourceTree = "<group>"; };
 		907F80F81CF2F6890023F98B /* SailvanElec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SailvanElec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		907F80FC1CF2F6890023F98B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		907F80FE1CF2F6890023F98B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -372,6 +378,7 @@
 		904C38881CF558D3004A8855 /* HYBControllerTransitions */ = {
 			isa = PBXGroup;
 			children = (
+				904C389E1CF58D2B004A8855 /* ModalTransition */,
 				904C38891CF558D3004A8855 /* HYBBaseTransition.h */,
 				904C388A1CF558D3004A8855 /* HYBBaseTransition.m */,
 				904C388B1CF558D3004A8855 /* HYBBubbleTransition.h */,
@@ -386,6 +393,24 @@
 				904C38941CF558D3004A8855 /* UIViewController+HYBMoveTransition.m */,
 			);
 			path = HYBControllerTransitions;
+			sourceTree = "<group>";
+		};
+		904C389E1CF58D2B004A8855 /* ModalTransition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModalTransition;
+			sourceTree = "<group>";
+		};
+		904C389F1CF592B9004A8855 /* JSItemImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				904C38A31CF59338004A8855 /* JSItemImageViewController.h */,
+				904C38A41CF59338004A8855 /* JSItemImageViewController.m */,
+				904C38A61CF5AC22004A8855 /* JSBigItemImageViewController.h */,
+				904C38A71CF5AC22004A8855 /* JSBigItemImageViewController.m */,
+			);
+			path = JSItemImageViewController;
 			sourceTree = "<group>";
 		};
 		907F80EF1CF2F6890023F98B = {
@@ -558,6 +583,7 @@
 		907F81511CF2F7C10023F98B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				904C389F1CF592B9004A8855 /* JSItemImageViewController */,
 				907F82571CF3F12F0023F98B /* JSNavigationController */,
 				907F81521CF2F7C10023F98B /* JSBasicViewController */,
 				907F81551CF2F7C10023F98B /* JSDatePicker */,
@@ -1295,6 +1321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				907F81FF1CF2F7C10023F98B /* UIViewController+ThreeDTouch.m in Sources */,
+				904C38A81CF5AC22004A8855 /* JSBigItemImageViewController.m in Sources */,
 				907F823D1CF2F7C10023F98B /* NinaBaseView.m in Sources */,
 				907F82301CF2F7C10023F98B /* UIDevice+Extend.m in Sources */,
 				907F82241CF2F7C10023F98B /* CoreArchive.m in Sources */,
@@ -1304,6 +1331,7 @@
 				907F822E1CF2F7C10023F98B /* NSString+Password.m in Sources */,
 				907F824A1CF2F8470023F98B /* MainViewController.m in Sources */,
 				907F81FE1CF2F7C10023F98B /* AppDelegate+ThridDTouch.m in Sources */,
+				904C38A51CF59338004A8855 /* JSItemImageViewController.m in Sources */,
 				904C389D1CF57812004A8855 /* HomeDetailVIewController.m in Sources */,
 				907F822C1CF2F7C10023F98B /* NSString+dateFromString.m in Sources */,
 				907F820B1CF2F7C10023F98B /* JSPresentView.m in Sources */,

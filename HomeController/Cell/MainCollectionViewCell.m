@@ -15,8 +15,12 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.aimgview=[UIImageView ImageViewImageName:@"" frame:self.contentView.bounds];
+        CGRect rect=self.contentView.bounds;
+   
+        self.aimgview=[UIImageView ImageViewImageName:@"" frame:rect];
         [self.contentView addSubview:self.aimgview];
+        
+   
     }
     return self;
 }
@@ -24,7 +28,9 @@
 -(void)JSCollectionViewController:(JSCollectionViewController *)JSCtrl collectionViewDateArr:(NSArray *)dateArr cellValue:(id)date indexPath:(NSIndexPath *)indexpath{
     
 //    self.backgroundColor=indexpath.item%2==0?[UIColor yellowColor]:[UIColor redColor];
+ 
     [self loadingBigPlaceholderImageName:date imgview:self.aimgview];
+
     
 }
 
