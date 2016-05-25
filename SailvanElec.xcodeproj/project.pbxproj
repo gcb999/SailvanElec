@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		904C38951CF558D3004A8855 /* HYBBaseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388A1CF558D3004A8855 /* HYBBaseTransition.m */; };
+		904C38961CF558D3004A8855 /* HYBBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388C1CF558D3004A8855 /* HYBBubbleTransition.m */; };
+		904C38971CF558D3004A8855 /* HYBEaseInOutTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388E1CF558D3004A8855 /* HYBEaseInOutTransition.m */; };
+		904C38981CF558D3004A8855 /* HYBModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38901CF558D3004A8855 /* HYBModalTransition.m */; };
+		904C38991CF558D3004A8855 /* HYBMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38921CF558D3004A8855 /* HYBMoveTransition.m */; };
+		904C389A1CF558D3004A8855 /* UIViewController+HYBMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38941CF558D3004A8855 /* UIViewController+HYBMoveTransition.m */; };
+		904C389D1CF57812004A8855 /* HomeDetailVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C389C1CF57812004A8855 /* HomeDetailVIewController.m */; };
 		907F80FD1CF2F6890023F98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FC1CF2F6890023F98B /* main.m */; };
 		907F81001CF2F6890023F98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FF1CF2F6890023F98B /* AppDelegate.m */; };
 		907F81031CF2F6890023F98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81021CF2F6890023F98B /* ViewController.m */; };
@@ -115,6 +122,20 @@
 
 /* Begin PBXFileReference section */
 		56B71F6C63715BDD0E68EFAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		904C38891CF558D3004A8855 /* HYBBaseTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBaseTransition.h; sourceTree = "<group>"; };
+		904C388A1CF558D3004A8855 /* HYBBaseTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBaseTransition.m; sourceTree = "<group>"; };
+		904C388B1CF558D3004A8855 /* HYBBubbleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBubbleTransition.h; sourceTree = "<group>"; };
+		904C388C1CF558D3004A8855 /* HYBBubbleTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBubbleTransition.m; sourceTree = "<group>"; };
+		904C388D1CF558D3004A8855 /* HYBEaseInOutTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBEaseInOutTransition.h; sourceTree = "<group>"; };
+		904C388E1CF558D3004A8855 /* HYBEaseInOutTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBEaseInOutTransition.m; sourceTree = "<group>"; };
+		904C388F1CF558D3004A8855 /* HYBModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBModalTransition.h; sourceTree = "<group>"; };
+		904C38901CF558D3004A8855 /* HYBModalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBModalTransition.m; sourceTree = "<group>"; };
+		904C38911CF558D3004A8855 /* HYBMoveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBMoveTransition.h; sourceTree = "<group>"; };
+		904C38921CF558D3004A8855 /* HYBMoveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBMoveTransition.m; sourceTree = "<group>"; };
+		904C38931CF558D3004A8855 /* UIViewController+HYBMoveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HYBMoveTransition.h"; sourceTree = "<group>"; };
+		904C38941CF558D3004A8855 /* UIViewController+HYBMoveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HYBMoveTransition.m"; sourceTree = "<group>"; };
+		904C389B1CF57812004A8855 /* HomeDetailVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailVIewController.h; sourceTree = "<group>"; };
+		904C389C1CF57812004A8855 /* HomeDetailVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailVIewController.m; sourceTree = "<group>"; };
 		907F80F81CF2F6890023F98B /* SailvanElec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SailvanElec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		907F80FC1CF2F6890023F98B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		907F80FE1CF2F6890023F98B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -348,6 +369,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		904C38881CF558D3004A8855 /* HYBControllerTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				904C38891CF558D3004A8855 /* HYBBaseTransition.h */,
+				904C388A1CF558D3004A8855 /* HYBBaseTransition.m */,
+				904C388B1CF558D3004A8855 /* HYBBubbleTransition.h */,
+				904C388C1CF558D3004A8855 /* HYBBubbleTransition.m */,
+				904C388D1CF558D3004A8855 /* HYBEaseInOutTransition.h */,
+				904C388E1CF558D3004A8855 /* HYBEaseInOutTransition.m */,
+				904C388F1CF558D3004A8855 /* HYBModalTransition.h */,
+				904C38901CF558D3004A8855 /* HYBModalTransition.m */,
+				904C38911CF558D3004A8855 /* HYBMoveTransition.h */,
+				904C38921CF558D3004A8855 /* HYBMoveTransition.m */,
+				904C38931CF558D3004A8855 /* UIViewController+HYBMoveTransition.h */,
+				904C38941CF558D3004A8855 /* UIViewController+HYBMoveTransition.m */,
+			);
+			path = HYBControllerTransitions;
+			sourceTree = "<group>";
+		};
 		907F80EF1CF2F6890023F98B = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +460,7 @@
 		907F81301CF2F7C10023F98B /* ShareControl */ = {
 			isa = PBXGroup;
 			children = (
+				907F82711CF455830023F98B /* Aniamtion */,
 				907F81311CF2F7C10023F98B /* 3DTouch */,
 				907F81361CF2F7C10023F98B /* header */,
 				907F81391CF2F7C10023F98B /* JSModel */,
@@ -1031,6 +1072,8 @@
 			children = (
 				907F82541CF3071B0023F98B /* HomeViewController.h */,
 				907F82551CF3071B0023F98B /* HomeViewController.m */,
+				904C389B1CF57812004A8855 /* HomeDetailVIewController.h */,
+				904C389C1CF57812004A8855 /* HomeDetailVIewController.m */,
 			);
 			path = MainController;
 			sourceTree = "<group>";
@@ -1051,6 +1094,14 @@
 				907F82631CF408090023F98B /* UIViewController+NavigationItem.m */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		907F82711CF455830023F98B /* Aniamtion */ = {
+			isa = PBXGroup;
+			children = (
+				904C38881CF558D3004A8855 /* HYBControllerTransitions */,
+			);
+			path = Aniamtion;
 			sourceTree = "<group>";
 		};
 		E2814CB537863966A2E349A9 /* Frameworks */ = {
@@ -1253,10 +1304,12 @@
 				907F822E1CF2F7C10023F98B /* NSString+Password.m in Sources */,
 				907F824A1CF2F8470023F98B /* MainViewController.m in Sources */,
 				907F81FE1CF2F7C10023F98B /* AppDelegate+ThridDTouch.m in Sources */,
+				904C389D1CF57812004A8855 /* HomeDetailVIewController.m in Sources */,
 				907F822C1CF2F7C10023F98B /* NSString+dateFromString.m in Sources */,
 				907F820B1CF2F7C10023F98B /* JSPresentView.m in Sources */,
 				907F82371CF2F7C10023F98B /* UIView+Extend.m in Sources */,
 				907F82231CF2F7C10023F98B /* CALayer+Transition.m in Sources */,
+				904C389A1CF558D3004A8855 /* UIViewController+HYBMoveTransition.m in Sources */,
 				907F82171CF2F7C10023F98B /* XTNetReloader.m in Sources */,
 				907F825D1CF4061A0023F98B /* JSBasicViewController+ThreeDTouch.m in Sources */,
 				907F820E1CF2F7C10023F98B /* JSCollectionViewController+CollectionView.m in Sources */,
@@ -1267,6 +1320,7 @@
 				907F821D1CF2F7C10023F98B /* JSTableViewController+StretchableTableHeaderView.m in Sources */,
 				907F82311CF2F7C10023F98B /* UIFont+Extend.m in Sources */,
 				907F82361CF2F7C10023F98B /* UIImage+Water.m in Sources */,
+				904C38961CF558D3004A8855 /* HYBBubbleTransition.m in Sources */,
 				907F82111CF2F7C10023F98B /* JSCollectionViewController+ThreeDTouch.m in Sources */,
 				907F823B1CF2F7C10023F98B /* NSObject+Utilty.m in Sources */,
 				907F820F1CF2F7C10023F98B /* JSCollectionViewController+MJRefresh.m in Sources */,
@@ -1276,6 +1330,7 @@
 				907F82021CF2F7C10023F98B /* JSError.m in Sources */,
 				907F824F1CF2FD610023F98B /* LeftTableViewCell.m in Sources */,
 				907F82011CF2F7C10023F98B /* JSMD5.m in Sources */,
+				904C38981CF558D3004A8855 /* HYBModalTransition.m in Sources */,
 				907F82561CF3071B0023F98B /* HomeViewController.m in Sources */,
 				907F82071CF2F7C10023F98B /* JSBraintree.m in Sources */,
 				907F82001CF2F7C10023F98B /* JSUserSingletonModel.m in Sources */,
@@ -1288,6 +1343,7 @@
 				907F822B1CF2F7C10023F98B /* NSObject+Extend.m in Sources */,
 				907F82211CF2F7C10023F98B /* JSTableViewController.m in Sources */,
 				907F822F1CF2F7C10023F98B /* UIColor+Extend.m in Sources */,
+				904C38951CF558D3004A8855 /* HYBBaseTransition.m in Sources */,
 				907F82191CF2F7C10023F98B /* UITableView+CYLTableViewPlaceHolder.m in Sources */,
 				907F821F1CF2F7C10023F98B /* JSTableViewController+TableView.m in Sources */,
 				907F82381CF2F7C10023F98B /* UIWindow+Launch.m in Sources */,
@@ -1301,6 +1357,7 @@
 				907F823E1CF2F7C10023F98B /* NinaPagerView.m in Sources */,
 				907F823F1CF2F7C10023F98B /* UIView+ViewController.m in Sources */,
 				907F82101CF2F7C10023F98B /* JSCollectionViewController+NotWorkView.m in Sources */,
+				904C38991CF558D3004A8855 /* HYBMoveTransition.m in Sources */,
 				907F822A1CF2F7C10023F98B /* NSMutableAttributedString+CBAttributedString.m in Sources */,
 				907F821C1CF2F7C10023F98B /* JSTableViewController+NotWorkView.m in Sources */,
 				907F820A1CF2F7C10023F98B /* JSPresentCommonViewCtrl.m in Sources */,
@@ -1313,6 +1370,7 @@
 				907F82531CF304140023F98B /* MainCollectionViewCell.m in Sources */,
 				907F820D1CF2F7C10023F98B /* JSTabBarControllerConfig.m in Sources */,
 				907F82041CF2F7C10023F98B /* JSNetWork+POST.m in Sources */,
+				904C38971CF558D3004A8855 /* HYBEaseInOutTransition.m in Sources */,
 				907F82641CF408090023F98B /* UIViewController+NavigationItem.m in Sources */,
 				907F82141CF2F7C10023F98B /* JSLineLayout.m in Sources */,
 				907F82161CF2F7C10023F98B /* WeChatStylePlaceHolder.m in Sources */,

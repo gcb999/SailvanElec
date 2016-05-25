@@ -10,6 +10,7 @@
 #import "LeftTableViewCell.h"
 
 
+
 @interface LeftViewController()<JSTableViewControllerDelegate>{
     
 }
@@ -81,5 +82,13 @@
     
     
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+
+
+}
+
+
 
 @end

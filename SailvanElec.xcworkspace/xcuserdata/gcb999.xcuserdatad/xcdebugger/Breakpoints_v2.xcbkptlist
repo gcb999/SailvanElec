@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MainController/HomeViewController.m"
-            timestampString = "485769033.520729"
+            filePath = "MainController/CustomPushAnimation.m"
+            timestampString = "485837521.900749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "-JSCollectionViewController:didSelectRowAtIndexPath:"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-animationControllerForPresentedController:presentingController:sourceController:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MainController/HomeViewController.m"
-            timestampString = "485769200.629003"
+            filePath = "MainController/CustomPushAnimation.m"
+            timestampString = "485837521.900749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "-scrollViewDidEndDecelerating:"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "-animationControllerForDismissedController:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MainController/CustomPushAnimation.m"
+            timestampString = "485834452.47223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-animateTransition:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MainController/CustomPushAnimation.m"
+            timestampString = "485838258.415507"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "-navigationController:animationControllerForOperation:fromViewController:toViewController:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

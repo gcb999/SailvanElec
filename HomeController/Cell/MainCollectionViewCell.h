@@ -10,4 +10,5 @@
 
 @interface MainCollectionViewCell : UICollectionViewCell<JSCollectionViewCellDelegate>
 
+@property(nonatomic,strong)UIImageView *aimgview;
 @end
