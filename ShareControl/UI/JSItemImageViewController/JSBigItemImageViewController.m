@@ -7,7 +7,7 @@
 //
 
 #import "JSBigItemImageViewController.h"
-#import "MainCollectionViewCell.h"
+#import "JSItemImgageViewCell.h"
 @interface JSBigItemImageViewController ()<JSCollectionViewControllerDelegate>
 {
     
@@ -21,6 +21,8 @@
 @end
 
 @implementation JSBigItemImageViewController
+
+
 
 
 - (void)viewDidLoad {
@@ -37,6 +39,7 @@
     //2： add colleciontionView
     [self.view addSubview:self.collectionViewController.view];
     [self addChildViewController:self.collectionViewController];
+    self.collectionViewController.collectionView.backgroundColor=[UIColor blackColor];
     
     
     //3:  添加PageController
@@ -52,6 +55,8 @@
     
     [self.collectionViewController.data addObjectsFromArray:self.bigImgUrl];
     self.pageControl.numberOfPages=self.bigImgUrl.count;
+    //默认设置页码
+    [self currentPage:1];
     [self.collectionViewController reloadHeader];
     
 }
@@ -60,7 +65,7 @@
 
 -(void)JSCollectionViewController:(JSCollectionViewController *)JSCtrl didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+     [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -69,22 +74,28 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     self.pageControl.currentPage = scrollView.contentOffset.x / IPHONScreenWidth;
+    NSInteger currentPage= self.pageControl.currentPage + 1;
+    [self currentPage:currentPage];
     
-        NSString * str = [NSString stringWithFormat:@"%ld/%ld",self.pageControl.currentPage + 1,self.pageControl.numberOfPages];
-        NSArray * array = [str componentsSeparatedByString:@"/"];
-        NSMutableAttributedString * string = [[NSMutableAttributedString alloc]initWithString:str];
-        NSString * string1 = array[0];
-        NSString * string2 = array[1];
-        [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20] range:NSMakeRange(0, string1.length)];
-        [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(string1.length, string2.length)];
-        self.pageLb.attributedText = string;
 }
 
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-//{
-//    self.pageControl.currentPage = scrollView.contentOffset.x / IPHONScreenWidth;
 
-//}
+
+#pragma mark -设置标题大小
+
+-(void)currentPage:(NSInteger)currentPage {
+    
+    
+    NSString * str = [NSString stringWithFormat:@"%ld/%ld",currentPage,self.collectionViewController.data.count];
+    NSArray * array = [str componentsSeparatedByString:@"/"];
+    NSMutableAttributedString * string = [[NSMutableAttributedString alloc]initWithString:str];
+    NSString * string1 = array[0];
+    NSString * string2 = array[1];
+    [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20] range:NSMakeRange(0, string1.length)];
+    [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(string1.length, string2.length)];
+    self.pageLb.attributedText = string;
+
+}
 
 
 #pragma mark -页码头部控件
@@ -105,9 +116,10 @@
 
 -(JSCollectionViewController *)collectionViewController{
     if(_collectionViewController==nil){
-        _collectionViewController =[[JSCollectionViewController alloc] initWithState:JSCollectionViewNormal CollectionViewCellClass:[MainCollectionViewCell class] delegate:self];
+        _collectionViewController =[[JSCollectionViewController alloc] initWithState:JSCollectionViewNormal CollectionViewCellClass:[JSItemImgageViewCell class] delegate:self];
+       
         _collectionViewController.pagingEnabled=YES;
-        
+         _collectionViewController.view.tag=2;
     }
     
     return _collectionViewController;
@@ -145,10 +157,11 @@
     //3: 设置PageController坐标
    
     _pageControl.frame=rect;
-//    _pageControl.center=CGPointMake(rect.size.width*0.5,rect.size.height*0.5f);
+
     
     //3： 添加流水布局
-    JSBaseFlowLayout *flowout=[[JSBaseFlowLayout alloc] initWithContentFrame:rect DirectionHorizontal:rect.size minimumLineSpacing:0];
+    CGRect collectViewRect=self.collectionViewController.view.frame;
+    JSBaseFlowLayout *flowout=[[JSBaseFlowLayout alloc] initWithContentFrame:collectViewRect DirectionHorizontal:collectViewRect.size minimumLineSpacing:0];
     self.collectionViewController.flowLayout=flowout;
     
 }

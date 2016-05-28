@@ -7,13 +7,20 @@
 //
 
 #import "JSItemImageViewController.h"
-#import "MainCollectionViewCell.h"
+#import "JSItemImgageViewCell.h"
 #import "JSBigItemImageViewController.h"
 
 @interface JSItemImageViewController ()<JSCollectionViewControllerDelegate>
 {
     
+    
 }
+
+@property(nonatomic,assign)CGRect contentRect;
+
+@property(nonatomic,strong)NSArray *smallImgUrls;
+
+@property(nonatomic,strong)NSArray *bigImgUrls;
 
 
 @property (nonatomic , strong) JSBaseFlowLayout *baseFlowLayOut;
@@ -23,9 +30,27 @@
 @implementation JSItemImageViewController
 
 
+- (instancetype)initWithFrame:(CGRect)frame smallImgUrl:(NSArray *)smallImgUrls bigImgUrl:(NSArray *)bigImgUrls
+{
+    self = [super init];
+    if (self) {
+       
+        self.contentRect=frame;
+        self.smallImgUrls=smallImgUrls;
+        self.bigImgUrls=bigImgUrls;
+        
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+
+
+    
     //1： add colleciontionView
     [self.view addSubview:self.collectionViewController.view];
     [self addChildViewController:self.collectionViewController];
@@ -33,9 +58,15 @@
     
     
     //2:  添加PageController
-    [self.view addSubview:self.pageControl];
+    [self.collectionViewController.view addSubview:self.pageControl];
     
     
+
+    //3： 添加流水布局
+    
+    CGSize size=self.contentRect.size;
+    JSBaseFlowLayout *flowout=[[JSBaseFlowLayout alloc] initWithContentFrame:self.contentRect DirectionHorizontal:size minimumLineSpacing:0];
+    self.collectionViewController.flowLayout=flowout;
    
  
 }
@@ -43,8 +74,8 @@
 #pragma mark -加载数据源
 -(void)JSCollectionViewController:(JSCollectionViewController *)JSCtrl LoadRequestCurrentPage:(NSInteger)currentPage{
     
-    [self.collectionViewController.data addObjectsFromArray:self.smallImgUrl];
-    self.pageControl.numberOfPages=self.smallImgUrl.count;
+    [self.collectionViewController.data addObjectsFromArray:self.smallImgUrls];
+    self.pageControl.numberOfPages=self.smallImgUrls.count;
     [self.collectionViewController reloadHeader];
     
 }
@@ -54,7 +85,7 @@
 -(void)JSCollectionViewController:(JSCollectionViewController *)JSCtrl didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     JSBigItemImageViewController *ctrl=[[JSBigItemImageViewController alloc] init];
-    ctrl.bigImgUrl=self.bigImgUrl;
+    ctrl.bigImgUrl=self.bigImgUrls;
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
@@ -72,8 +103,10 @@
 
 -(JSCollectionViewController *)collectionViewController{
     if(_collectionViewController==nil){
-     _collectionViewController =[[JSCollectionViewController alloc] initWithState:JSCollectionViewNormal CollectionViewCellClass:[MainCollectionViewCell class] delegate:self];
+     _collectionViewController =[[JSCollectionViewController alloc] initWithState:JSCollectionViewNormal CollectionViewCellClass:[JSItemImgageViewCell class] delegate:self];
+      
         _collectionViewController.pagingEnabled=YES;
+        _collectionViewController.view.tag=1;
         
     }
     
@@ -86,32 +119,34 @@
 - (UIPageControl *)pageControl
 {
     if (_pageControl == nil) {
+
         _pageControl = [[UIPageControl alloc]initWithFrame:CGRectZero];
+
+        
+
         
             }
     return _pageControl;
 }
 
+
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
-    CGRect rect =self.view.bounds;
+    //1：CollectionView
+    self.collectionViewController.view.frame=self.contentRect;
     
-    //1:设置CollectionView坐标
-    self.collectionViewController.view.frame=rect;
+    //2: 页码
+    CGSize size=self.contentRect.size;
+    self.pageControl.frame= CGRectMake(0, size.height-20, size.width, 20);
     
-    //2: 设置PageController坐标
-    CGSize size=rect.size;
-    CGFloat width=size.width*0.5f;
-    CGFloat height=size.height-20;
-    _pageControl.frame=CGRectMake(0, 0, size.width, 20);
-    _pageControl.center=CGPointMake(width,height);
+    
     
     //3： 添加流水布局
-    JSBaseFlowLayout *flowout=[[JSBaseFlowLayout alloc] initWithContentFrame:rect DirectionHorizontal:rect.size minimumLineSpacing:0];
+    CGRect collectViewRect=self.collectionViewController.view.frame;
+    JSBaseFlowLayout *flowout=[[JSBaseFlowLayout alloc] initWithContentFrame:collectViewRect DirectionHorizontal:collectViewRect.size minimumLineSpacing:0];
     self.collectionViewController.flowLayout=flowout;
 
 }
-
 
 @end

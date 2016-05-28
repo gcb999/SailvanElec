@@ -11,9 +11,10 @@
 @interface JSItemImageViewController : UIViewController
 
 
-@property(nonatomic,strong)NSArray *smallImgUrl;
 
-@property(nonatomic,strong)NSArray *bigImgUrl;
+- (instancetype)initWithFrame:(CGRect)frame smallImgUrl:(NSArray *)smallImgUrls bigImgUrl:(NSArray *)bigImgUrls;
+
+
 
 @property (nonatomic , strong) UIPageControl *pageControl;
 @property (nonatomic , strong) JSCollectionViewController *collectionViewController;

@@ -63,6 +63,8 @@
         //水平间距
         self.minimumLineSpacing = minimumLineSpacing;//cell与cell水平间距
         
+        self.minimumInteritemSpacing=0;
+        
 
         
         // 垂直方向边缘间距

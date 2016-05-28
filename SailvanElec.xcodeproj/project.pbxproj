@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		900EDD241CF940A500E6FFB5 /* JSItemImgageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */; };
 		904C38951CF558D3004A8855 /* HYBBaseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388A1CF558D3004A8855 /* HYBBaseTransition.m */; };
 		904C38961CF558D3004A8855 /* HYBBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388C1CF558D3004A8855 /* HYBBubbleTransition.m */; };
 		904C38971CF558D3004A8855 /* HYBEaseInOutTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388E1CF558D3004A8855 /* HYBEaseInOutTransition.m */; };
@@ -124,6 +125,8 @@
 
 /* Begin PBXFileReference section */
 		56B71F6C63715BDD0E68EFAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		900EDD221CF940A500E6FFB5 /* JSItemImgageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImgageViewCell.h; sourceTree = "<group>"; };
+		900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImgageViewCell.m; sourceTree = "<group>"; };
 		904C38891CF558D3004A8855 /* HYBBaseTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBaseTransition.h; sourceTree = "<group>"; };
 		904C388A1CF558D3004A8855 /* HYBBaseTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBaseTransition.m; sourceTree = "<group>"; };
 		904C388B1CF558D3004A8855 /* HYBBubbleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBubbleTransition.h; sourceTree = "<group>"; };
@@ -409,6 +412,8 @@
 				904C38A41CF59338004A8855 /* JSItemImageViewController.m */,
 				904C38A61CF5AC22004A8855 /* JSBigItemImageViewController.h */,
 				904C38A71CF5AC22004A8855 /* JSBigItemImageViewController.m */,
+				900EDD221CF940A500E6FFB5 /* JSItemImgageViewCell.h */,
+				900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */,
 			);
 			path = JSItemImageViewController;
 			sourceTree = "<group>";
@@ -1361,6 +1366,7 @@
 				904C38981CF558D3004A8855 /* HYBModalTransition.m in Sources */,
 				907F82561CF3071B0023F98B /* HomeViewController.m in Sources */,
 				907F82071CF2F7C10023F98B /* JSBraintree.m in Sources */,
+				900EDD241CF940A500E6FFB5 /* JSItemImgageViewCell.m in Sources */,
 				907F82001CF2F7C10023F98B /* JSUserSingletonModel.m in Sources */,
 				907F820C1CF2F7C10023F98B /* JSNinaPagerViewConfig.m in Sources */,
 				907F82221CF2F7C10023F98B /* CALayer+Anim.m in Sources */,
