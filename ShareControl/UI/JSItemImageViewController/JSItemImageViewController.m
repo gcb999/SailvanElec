@@ -9,6 +9,7 @@
 #import "JSItemImageViewController.h"
 #import "JSItemImgageViewCell.h"
 #import "JSBigItemImageViewController.h"
+#import "JSItemImageViewTransition.h"
 
 @interface JSItemImageViewController ()<JSCollectionViewControllerDelegate>
 {
@@ -24,6 +25,8 @@
 
 
 @property (nonatomic , strong) JSBaseFlowLayout *baseFlowLayOut;
+
+@property(nonnull ,strong)JSItemImageViewTransition *transition;
 
 @end
 
@@ -86,7 +89,22 @@
     
     JSBigItemImageViewController *ctrl=[[JSBigItemImageViewController alloc] init];
     ctrl.bigImgUrl=self.bigImgUrls;
-    [self.navigationController pushViewController:ctrl animated:YES];
+    
+    self.transition=[[JSItemImageViewTransition alloc] initWithPresented:^(UIViewController *presented, UIViewController *presenting, UIViewController *source, HYBBaseTransition *transition) {
+        
+    } dismissed:^(UIViewController *dismissed, HYBBaseTransition *transition) {
+         self.transition.transitionMode = kHYBTransitionDismiss;
+    }];
+    
+//     vc.modalPresentationStyle = UIModalPresentationCustom;
+     ctrl.transitioningDelegate = self.transition;
+   
+    [self presentViewController:ctrl animated:YES completion:^{
+        
+    }];
+    
+    
+    
 }
 
 

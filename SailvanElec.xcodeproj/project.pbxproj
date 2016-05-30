@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		900EDD241CF940A500E6FFB5 /* JSItemImgageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */; };
+		90405FF81CFBCA2A0050C056 /* JSItemImageViewTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */; };
 		904C38951CF558D3004A8855 /* HYBBaseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388A1CF558D3004A8855 /* HYBBaseTransition.m */; };
 		904C38961CF558D3004A8855 /* HYBBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388C1CF558D3004A8855 /* HYBBubbleTransition.m */; };
 		904C38971CF558D3004A8855 /* HYBEaseInOutTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388E1CF558D3004A8855 /* HYBEaseInOutTransition.m */; };
@@ -127,6 +128,8 @@
 		56B71F6C63715BDD0E68EFAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		900EDD221CF940A500E6FFB5 /* JSItemImgageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImgageViewCell.h; sourceTree = "<group>"; };
 		900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImgageViewCell.m; sourceTree = "<group>"; };
+		90405FF61CFBCA2A0050C056 /* JSItemImageViewTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImageViewTransition.h; sourceTree = "<group>"; };
+		90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImageViewTransition.m; sourceTree = "<group>"; };
 		904C38891CF558D3004A8855 /* HYBBaseTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBaseTransition.h; sourceTree = "<group>"; };
 		904C388A1CF558D3004A8855 /* HYBBaseTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBaseTransition.m; sourceTree = "<group>"; };
 		904C388B1CF558D3004A8855 /* HYBBubbleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBubbleTransition.h; sourceTree = "<group>"; };
@@ -414,6 +417,8 @@
 				904C38A71CF5AC22004A8855 /* JSBigItemImageViewController.m */,
 				900EDD221CF940A500E6FFB5 /* JSItemImgageViewCell.h */,
 				900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */,
+				90405FF61CFBCA2A0050C056 /* JSItemImageViewTransition.h */,
+				90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */,
 			);
 			path = JSItemImageViewController;
 			sourceTree = "<group>";
@@ -1384,6 +1389,7 @@
 				907F82121CF2F7C10023F98B /* JSCollectionViewController.m in Sources */,
 				907F825A1CF3F14F0023F98B /* JSNavigationController.m in Sources */,
 				907F82391CF2F7C10023F98B /* NSObject+SDWebImage.m in Sources */,
+				90405FF81CFBCA2A0050C056 /* JSItemImageViewTransition.m in Sources */,
 				907F82321CF2F7C10023F98B /* UIImage+Color.m in Sources */,
 				907F82271CF2F7C10023F98B /* NSData+stringFromDate.m in Sources */,
 				907F821A1CF2F7C10023F98B /* JSStretchableTableHeaderView.m in Sources */,
