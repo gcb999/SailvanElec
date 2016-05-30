@@ -40,7 +40,7 @@
     NSArray *titleArray =   @[
                               @"女装",
                               @"男装",
-                              @"珠宝"
+                              @"PL"
                               ];
     
     
@@ -57,7 +57,7 @@
     NSArray *vcsArray = @[
                           @"HomeViewController",
                           @"LeftViewController",
-                          @"RightViewController"
+                          @"PlaceOrderViewController"
                      
                           ];
     

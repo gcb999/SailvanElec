@@ -92,7 +92,7 @@
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:aRect];
     imageView.userInteractionEnabled = YES;
     if(aImageName ==nil || [aImageName isEqualToString:@""] || aImageName.length==0){
-       return imageView; 
+        return imageView;
     }
     else{
         UIImage *aImage = [UIImage imageWithContentsOfFile:BUNDLE_PATH_IMAGENAME(aImageName)];
