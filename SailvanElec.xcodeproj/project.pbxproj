@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9000CD7D1CFD339C007C888D /* NSDate+stringFromDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9000CD7C1CFD339C007C888D /* NSDate+stringFromDate.m */; };
+		9000CD801CFD3A19007C888D /* JSProductCollectionViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9000CD7F1CFD3A19007C888D /* JSProductCollectionViewCellModel.m */; };
+		9000CD861CFD67B5007C888D /* JSProductCollectionViewCellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9000CD851CFD67B5007C888D /* JSProductCollectionViewCellFrameModel.m */; };
 		900EDD241CF940A500E6FFB5 /* JSItemImgageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */; };
 		90405FF81CFBCA2A0050C056 /* JSItemImageViewTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */; };
-		904060001CFBD9040050C056 /* JSProductViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FFF1CFBD9040050C056 /* JSProductViewCell.m */; };
+		904060001CFBD9040050C056 /* JSProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FFF1CFBD9040050C056 /* JSProductCollectionViewCell.m */; };
 		904060031CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060021CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m */; };
 		904060061CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060051CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m */; };
 		904060091CFC1A7E0050C056 /* JSPlaceOrderCollectionViewCellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060081CFC1A7E0050C056 /* JSPlaceOrderCollectionViewCellFrameModel.m */; };
@@ -133,12 +135,16 @@
 		56B71F6C63715BDD0E68EFAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9000CD7B1CFD339C007C888D /* NSDate+stringFromDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+stringFromDate.h"; sourceTree = "<group>"; };
 		9000CD7C1CFD339C007C888D /* NSDate+stringFromDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+stringFromDate.m"; sourceTree = "<group>"; };
+		9000CD7E1CFD3A19007C888D /* JSProductCollectionViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductCollectionViewCellModel.h; sourceTree = "<group>"; };
+		9000CD7F1CFD3A19007C888D /* JSProductCollectionViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductCollectionViewCellModel.m; sourceTree = "<group>"; };
+		9000CD841CFD67B5007C888D /* JSProductCollectionViewCellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductCollectionViewCellFrameModel.h; sourceTree = "<group>"; };
+		9000CD851CFD67B5007C888D /* JSProductCollectionViewCellFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductCollectionViewCellFrameModel.m; sourceTree = "<group>"; };
 		900EDD221CF940A500E6FFB5 /* JSItemImgageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImgageViewCell.h; sourceTree = "<group>"; };
 		900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImgageViewCell.m; sourceTree = "<group>"; };
 		90405FF61CFBCA2A0050C056 /* JSItemImageViewTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImageViewTransition.h; sourceTree = "<group>"; };
 		90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImageViewTransition.m; sourceTree = "<group>"; };
-		90405FFE1CFBD9040050C056 /* JSProductViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductViewCell.h; sourceTree = "<group>"; };
-		90405FFF1CFBD9040050C056 /* JSProductViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductViewCell.m; sourceTree = "<group>"; };
+		90405FFE1CFBD9040050C056 /* JSProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductCollectionViewCell.h; sourceTree = "<group>"; };
+		90405FFF1CFBD9040050C056 /* JSProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductCollectionViewCell.m; sourceTree = "<group>"; };
 		904060011CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPlaceOrderCollectionViewCell.h; sourceTree = "<group>"; };
 		904060021CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPlaceOrderCollectionViewCell.m; sourceTree = "<group>"; };
 		904060041CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPlaceOrderCollectionViewCellModel.h; sourceTree = "<group>"; };
@@ -430,8 +436,12 @@
 		90405FFC1CFBD8E00050C056 /* ProductCell */ = {
 			isa = PBXGroup;
 			children = (
-				90405FFE1CFBD9040050C056 /* JSProductViewCell.h */,
-				90405FFF1CFBD9040050C056 /* JSProductViewCell.m */,
+				90405FFE1CFBD9040050C056 /* JSProductCollectionViewCell.h */,
+				90405FFF1CFBD9040050C056 /* JSProductCollectionViewCell.m */,
+				9000CD7E1CFD3A19007C888D /* JSProductCollectionViewCellModel.h */,
+				9000CD7F1CFD3A19007C888D /* JSProductCollectionViewCellModel.m */,
+				9000CD841CFD67B5007C888D /* JSProductCollectionViewCellFrameModel.h */,
+				9000CD851CFD67B5007C888D /* JSProductCollectionViewCellFrameModel.m */,
 			);
 			path = ProductCell;
 			sourceTree = "<group>";
@@ -1433,6 +1443,7 @@
 				907F82361CF2F7C10023F98B /* UIImage+Water.m in Sources */,
 				904C38961CF558D3004A8855 /* HYBBubbleTransition.m in Sources */,
 				907F82111CF2F7C10023F98B /* JSCollectionViewController+ThreeDTouch.m in Sources */,
+				9000CD861CFD67B5007C888D /* JSProductCollectionViewCellFrameModel.m in Sources */,
 				907F823B1CF2F7C10023F98B /* NSObject+Utilty.m in Sources */,
 				907F820F1CF2F7C10023F98B /* JSCollectionViewController+MJRefresh.m in Sources */,
 				907F82291CF2F7C10023F98B /* NSDictionary+Extension.m in Sources */,
@@ -1459,13 +1470,14 @@
 				904C38951CF558D3004A8855 /* HYBBaseTransition.m in Sources */,
 				907F82191CF2F7C10023F98B /* UITableView+CYLTableViewPlaceHolder.m in Sources */,
 				907F821F1CF2F7C10023F98B /* JSTableViewController+TableView.m in Sources */,
-				904060001CFBD9040050C056 /* JSProductViewCell.m in Sources */,
+				904060001CFBD9040050C056 /* JSProductCollectionViewCell.m in Sources */,
 				9040600D1CFC36010050C056 /* PlaceOrderViewController.m in Sources */,
 				907F82381CF2F7C10023F98B /* UIWindow+Launch.m in Sources */,
 				907F82121CF2F7C10023F98B /* JSCollectionViewController.m in Sources */,
 				907F825A1CF3F14F0023F98B /* JSNavigationController.m in Sources */,
 				907F82391CF2F7C10023F98B /* NSObject+SDWebImage.m in Sources */,
 				90405FF81CFBCA2A0050C056 /* JSItemImageViewTransition.m in Sources */,
+				9000CD801CFD3A19007C888D /* JSProductCollectionViewCellModel.m in Sources */,
 				907F82321CF2F7C10023F98B /* UIImage+Color.m in Sources */,
 				907F821A1CF2F7C10023F98B /* JSStretchableTableHeaderView.m in Sources */,
 				907F82061CF2F7C10023F98B /* JSApplePay.m in Sources */,

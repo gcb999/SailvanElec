@@ -7,16 +7,20 @@
 //
 
 #import "HomeViewController.h"
-#import "JSProductViewCell.h"
+#import "JSProductCollectionViewCell.h"
 #import "HomeDetailVIewController.h"
 #import "HYBMoveTransition.h"
 #import "HYBModalTransition.h"
+#import "JSProductCollectionViewCell.h"
+#import "JSWaterFlowLayout.h"
+#import "JSProductCollectionViewCellFrameModel.h"
+
 
 
 @interface HomeViewController ()<JSCollectionViewControllerDelegate,UINavigationControllerDelegate,UICollectionViewDelegate>
 {
     
-//    HYBMoveTransition *customPush;
+ JSCollectionViewController *ctrl;
 }
 @property (nonatomic , strong) UIPageControl *pageControl;
 @property (nonatomic, strong) HYBMoveTransition *transition;
@@ -35,7 +39,7 @@
  
     
 
-    JSCollectionViewController *ctrl=[[JSCollectionViewController alloc] initWithState:JSCollectionViewNormal CollectionViewCellClass:[JSProductViewCell class] delegate:self];
+   ctrl=[[JSCollectionViewController alloc] initWithState:JSCollectionViewNormal CollectionViewCellClass:[JSProductCollectionViewCell class] delegate:self];
     ctrl.pagingEnabled=YES;
     
     ctrl.view.frame=self.view.bounds;
@@ -44,8 +48,8 @@
     [self.view addSubview:ctrl.view];
     [self addChildViewController:ctrl];
   
-    JSBaseFlowLayout *flowout=[[JSBaseFlowLayout alloc] initWithDirectionVertical:2 itemHeight:200];
-    
+    JSWaterFlowLayout *flowout=[[JSWaterFlowLayout alloc] init];
+    flowout.delegate=self;
     ctrl.flowLayout=flowout;
     [self.view addSubview:self.pageControl];
 
@@ -65,10 +69,6 @@
     HomeDetailVIewController *ctrl=[[HomeDetailVIewController alloc] init];
     NSString *url=JSCtrl.data[indexPath.row];
     ctrl.imageUrl=url;
-
-
-     
-     
         
 //        self.navigationController.delegate=self.transition;
         [self.navigationController pushViewController:ctrl animated:YES];
@@ -87,22 +87,40 @@
 -(void)JSCollectionViewController:(JSCollectionViewController *)SWCtrl LoadRequestCurrentPage:(NSInteger)currentPage{
     
     [SWCtrl.data removeAllObjects];
-    NSArray *date=@[
-                    @"",@"",@"",
-                    @"",@"",@"",
-                    @"",@"",@"",
-                    @"",@"",@"",
-                    @"",@"",@""
-                    
-                    ];
-    self.pageControl.numberOfPages = date.count;
-    [SWCtrl.data addObjectsFromArray:date];
+    for (int i=0; i<20; i++) {
+        JSProductCollectionViewCellFrameModel *frameModel=[[JSProductCollectionViewCellFrameModel alloc] initWithDic:@{}];
+        [SWCtrl.data addObject:frameModel];
+    }
+    
+    
     [SWCtrl reloadHeader];
     
     
     
 }
 
+#pragma mark -JSWaterFlowLayoutDelegate
+
+//设置每个Item高度
+- (CGFloat)waterflowLayout:(JSWaterFlowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth{
+
+    JSProductCollectionViewCellFrameModel *frameModel=ctrl.data[index];
+    return frameModel.rowHeight;
+    
+}
+
+//设置一行几列
+
+- (CGFloat)columnCountInWaterflowLayout:(JSWaterFlowLayout *)waterflowLayout;{
+    
+    return 2;
+    
+}
+
+#pragma mark-设置 section
+- (UIEdgeInsets)edgeInsetsInWaterflowLayout:(JSWaterFlowLayout *)waterflowLayout{
+    return UIEdgeInsetsMake(5, 5, 5, 5);
+}
 
 
 

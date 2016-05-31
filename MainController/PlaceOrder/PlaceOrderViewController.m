@@ -49,7 +49,7 @@
 
 -(void)JSCollectionViewController:(JSCollectionViewController *)SWCtrl LoadRequestCurrentPage:(NSInteger)currentPage{
     
-    for (int i=0; i<10; i++) {
+    for (int i=0; i<20; i++) {
         JSPlaceOrderCollectionViewCellFrameModel *frameModel=[[JSPlaceOrderCollectionViewCellFrameModel alloc] initWithDic:@{}];
         [SWCtrl.data addObject:frameModel];
     }

@@ -91,8 +91,17 @@
         _rowHeight+=20;
         
         //4:原价和特价
-        CGRectDivide(rect, &hrect, &rect, 20, CGRectMinYEdge);
-        _rowHeight+=20;
+        
+        if (IS_NSString(self.model.product_DiscountPrice)) {//特价为空
+            
+            CGRectDivide(rect, &hrect, &rect, 20, CGRectMinYEdge);
+             _rowHeight+=20;
+            _product_Price_Frame=CGRectZero;//原价
+            _product_DiscountPrice_Frame=CGRectZero;//折扣价
+            
+        }
+        else{//---
+     
         
         if(!IS_NSString(self.model.product_Price)  || [self.model.product_DiscountPrice isEqualToString:self.model.product_Price]){//只显示特价
              
@@ -109,6 +118,8 @@
              _product_Price_Frame=UIEdgeInsetsInsetRect(priceRect, UIEdgeInsetsMake(0, 0, 0, KJSPlaceOrderPadding));//原价
              _product_DiscountPrice_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, KJSPlaceOrderPadding, 0, 0));//折扣价
          }
+            
+        }
         
         //5:闪购 图片大小 30*30
         if (self.model.is_FlashGo) {
