@@ -15,6 +15,10 @@
 //1: 背景图片坐标
 @property(nonatomic ,assign,readonly) CGRect bgImgView_Frame;
 
+
+//2:闪购图片
+@property(nonatomic ,assign,readonly) CGRect product_flashGo_Lable_Frame;
+
 //2:大图坐标
 @property(nonatomic ,assign,readonly) CGRect product_Url_Frame;
 
@@ -32,19 +36,22 @@
 
 
 
-//5: 优惠价与原价坐标
+//4: 优惠价与原价坐标
 
 @property(nonatomic ,assign,readonly) CGRect product_Price_Frame;
 
 @property(nonatomic ,assign,readonly) CGRect product_DiscountPrice_Frame;
 
 
+//5: edit 和 Buy
 
-//6:闪购
+@property(nonatomic ,assign,readonly) CGRect edit_Frame;
 
-@property(nonatomic ,assign,readonly) CGRect product_flashGo_ImgView_Frame;
+@property(nonatomic ,assign,readonly) CGRect buy_Frame;
 
-@property(nonatomic ,assign,readonly) CGRect product_flashGo_Lable_Frame;
+
+
+
 
 
 //7:免邮

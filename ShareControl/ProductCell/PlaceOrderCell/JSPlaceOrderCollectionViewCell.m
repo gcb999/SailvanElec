@@ -23,8 +23,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        
-        
+   
+
         //背景图片
         self.bgImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
         [self.contentView addSubview: self.bgImgView];

@@ -86,8 +86,17 @@
 
 #pragma mark-设置 section
 - (UIEdgeInsets)edgeInsetsInWaterflowLayout:(JSWaterFlowLayout *)waterflowLayout{
-    return UIEdgeInsetsMake(5, 5, 5, 5);
+    return UIEdgeInsetsMake(0, 5, 0, 0);
 }
 
+#pragma mark -列
+- (CGFloat)columnMarginInWaterflowLayout:(JSWaterFlowLayout *)waterflowLayout{
+    return 2;
+}
+
+#pragma mark -行
+- (CGFloat)rowMarginInWaterflowLayout:(JSWaterFlowLayout *)waterflowLayout{
+    return 3;
+}
 
 @end

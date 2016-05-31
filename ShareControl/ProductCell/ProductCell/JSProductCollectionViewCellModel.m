@@ -22,27 +22,30 @@
         self.is_Discount=YES;
         self.product_Discount=@"-80%";
         
-        //标题
-        self.product_Title=@"标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试";
-        
-
-        
-        
-        //原件和特价
-        
-        self.product_Price=@"$80";
-        self.product_DiscountPrice=@"$50";
-        
-        
-        //卖光
-        self.is_SoldOut=YES;
-        
+       
 #pragma mark - 闪购
         self.is_FlashGo=YES;
         
         self.product_flashGo_Time=@"2016-06-1 03:07:10";
         
         
+        
+        //标题
+        self.product_Title=@"标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试";
+        
+
+        
+        //原件和特价
+        
+        self.product_Price=@"$80";
+        self.product_DiscountPrice=@"$50";
+        
+        //edit buy
+        self.is_edit_buy=YES;
+        
+        
+        //卖光
+        self.is_SoldOut=YES;
         
         //免邮
         self.is_free_shipping=YES;

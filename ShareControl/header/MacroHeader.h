@@ -133,7 +133,7 @@
 
 
 
-
+#define KborderColor     rgb(230, 230, 231)
 //主色
 #define KCOLOR_MAIN   [UIColor orangeColor]
 //黑色

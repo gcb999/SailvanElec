@@ -19,19 +19,29 @@
         
 #pragma mark -左边
         
-        //1：商品图片大小
+        //1:闪购
+        if(self.model.is_FlashGo){
+            _rowHeight+=30;
+        }
+        
+        //2：商品图片大小
         _rowHeight+=120;
         
-        //2: 标题
+        //3: 标题
         if(IS_NSString(self.model.product_Title)){
             _rowHeight+=35;
         }
-        //3: 价格
+        //4: 价格
         if (IS_NSString(self.model.product_DiscountPrice)) {
             _rowHeight+=20;
         }
         
+        //5：是否edit和buy按钮
+        if (self.model.is_edit_buy) {
+               _rowHeight+=35;
+        }
 
+        
        //最后要把rowHeight适当添加高度
         _rowHeight+=10;
 
@@ -46,12 +56,21 @@
     
     CGRect hrect;
     
-    //1: 大图
+   
+    //1: 闪购
+    if(self.model.is_FlashGo){
+        CGRectDivide(rect, &hrect, &rect, 30, CGRectMinYEdge);
+        _product_flashGo_Lable_Frame=hrect;
+        
+    }
+    
+    
+    //2: 大图
     CGRectDivide(rect, &hrect, &rect, 120, CGRectMinYEdge);
     _product_Url_Frame=hrect;
     
     
-    //2:折扣图片 和文字
+    //3:折扣图片 和文字
     if(self.model.is_Discount){
         
         _product_Discount_ImgView_Frame=CGRectMake(0, 0, 40, 40);
@@ -62,6 +81,8 @@
         _product_Discount_ImgView_Frame=CGRectZero;
         _product_Discount_Label_Frame=CGRectZero;
     }
+    
+ 
     
     //3: 标题
     if(IS_NSString(_model.product_Title)){
@@ -101,6 +122,25 @@
     }
         
     }
+
+    //edit,Buy
+    
+    if (self.model.is_edit_buy) {
+        
+        CGRectDivide(rect, &hrect, &rect, 35, CGRectMinYEdge);
+        
+        CGRect edit_buy_Rect;
+        CGFloat width=hrect.size.width*0.5f;
+        CGRectDivide(hrect, &edit_buy_Rect, &hrect,width,CGRectMinXEdge);
+        _edit_Frame=UIEdgeInsetsInsetRect(edit_buy_Rect, UIEdgeInsetsMake(0, 0, 0, 2));//编辑
+        _buy_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, 0, 0, 0));//buy
+    
+    }
+    else{
+        _edit_Frame=CGRectZero;
+        _buy_Frame=CGRectZero;
+    }
+    
 
     
     

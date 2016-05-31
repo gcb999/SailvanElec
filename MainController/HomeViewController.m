@@ -122,6 +122,13 @@
     return UIEdgeInsetsMake(5, 5, 5, 5);
 }
 
+- (CGFloat)columnMarginInWaterflowLayout:(JSWaterFlowLayout *)waterflowLayout{
+    return 2;
+}
+
+- (CGFloat)rowMarginInWaterflowLayout:(JSWaterFlowLayout *)waterflowLayout{
+    return 5;
+}
 
 
 

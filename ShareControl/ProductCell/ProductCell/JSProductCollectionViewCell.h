@@ -15,6 +15,9 @@
 //1:背景图
 @property(nonatomic ,strong)UIImageView *bgImgView;
 
+//8：闪购时间
+@property(nonatomic,strong)UILabel *product_flashGo_label;
+
 //2:大图
 @property(nonatomic ,strong)UIImageView *productImgView;
 
@@ -33,6 +36,12 @@
 
 @property(nonatomic ,strong)UILabel *product_Price_Label;
 @property(nonatomic ,strong)UILabel *product_DiscountPrice_Label;
+
+//5:编辑和购买
+
+@property(nonatomic,strong)JSDIYButton *editBtn;
+
+@property(nonatomic,strong)JSDIYButton *buyBtn;
 
 
 @end

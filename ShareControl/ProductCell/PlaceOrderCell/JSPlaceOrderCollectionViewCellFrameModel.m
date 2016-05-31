@@ -22,7 +22,7 @@
 #pragma mark -左边
         
         //1：商品图片大小
-        _product_Url_Frame=CGRectMake(0, KJSPlaceOrderPadding, 120, 120);
+        _product_Url_Frame=CGRectMake(0, 0, 120, 120);
         
         
         //2:折扣图片 和文字
@@ -42,14 +42,13 @@
 #pragma mark -右边
         CGFloat width=_product_Url_Frame.size.width;
         CGRectDivide(rect, &lrect, &rect,width , CGRectMinXEdge);
-        
-        rect=UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(KJSPlaceOrderPadding, KJSPlaceOrderPadding, KJSPlaceOrderPadding, KJSPlaceOrderPadding));
-        _rowHeight+=5;
+        rect=UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(0, 5, 0, 5));
+
         //1: 标题
-        CGRectDivide(rect, &hrect, &rect, 35, CGRectMinYEdge);
+        CGRectDivide(rect, &hrect, &rect, 40, CGRectMinYEdge);
         _product_Title_Frame=hrect;
         
-        _rowHeight+=35;
+        _rowHeight+=40;
         
         
         //2: color,type,size
@@ -92,17 +91,17 @@
         
         //4:原价和特价
         
-        if (IS_NSString(self.model.product_DiscountPrice)) {//特价为空
+        if (!IS_NSString(self.model.product_DiscountPrice)) {//特价为空
             
-            CGRectDivide(rect, &hrect, &rect, 20, CGRectMinYEdge);
-             _rowHeight+=20;
+       
             _product_Price_Frame=CGRectZero;//原价
             _product_DiscountPrice_Frame=CGRectZero;//折扣价
             
         }
         else{//---
      
-        
+            CGRectDivide(rect, &hrect, &rect, 20, CGRectMinYEdge);
+            _rowHeight+=20;
         if(!IS_NSString(self.model.product_Price)  || [self.model.product_DiscountPrice isEqualToString:self.model.product_Price]){//只显示特价
              
              _product_Price_Frame=CGRectZero;//原价
@@ -113,7 +112,8 @@
             
              CGRect priceRect;
           
-             CGRectDivide(hrect, &priceRect, &hrect, 30, CGRectMinXEdge);
+             
+             CGRectDivide(hrect, &priceRect, &hrect, 40, CGRectMinXEdge);
              
              _product_Price_Frame=UIEdgeInsetsInsetRect(priceRect, UIEdgeInsetsMake(0, 0, 0, KJSPlaceOrderPadding));//原价
              _product_DiscountPrice_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, KJSPlaceOrderPadding, 0, 0));//折扣价
@@ -168,20 +168,21 @@
             _product_SoldOut_Frame=CGRectZero;
             
         }
-//        //间距
-//          CGRectDivide(rect, &hrect, &rect, 5, CGRectMinYEdge);
-//        
+       
+        //间距
+        CGRectDivide(rect, &hrect, &rect, 10, CGRectMinYEdge);
+         _rowHeight+=10;
         //8: 线
       
         CGRect lineRect;
         CGRectDivide(rect, &lineRect, &rect, 1, CGRectMinYEdge);
-//        _product_line_Frame=CGRectMake(0,0, IPHONScreenWidth, lineRect.origin.y+lineRect.size.height);
+        _product_line_Frame=CGRectMake(0,lineRect.origin.y+lineRect.size.height, IPHONScreenWidth,1 );
         
  
         //最后要把rowHeight适当添加高度
-        _rowHeight+=20;
+        _rowHeight+=5;
         if (_rowHeight<=_product_Url_Frame.size.height) {
-            _rowHeight+=_product_Url_Frame.size.height+20;
+            _rowHeight+=_product_Url_Frame.size.height+5;
         }
         
     }
