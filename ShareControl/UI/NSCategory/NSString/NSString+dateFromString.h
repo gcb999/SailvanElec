@@ -12,9 +12,9 @@
 
 #pragma mark - 日期装换字符串
 
--(NSDate *)dateFromString:(NSString *)dateString;
+-(NSDate *)dateFromString;
 
--(NSDate *)dateFromString:(NSString *)dateString dateFormat:(NSString *)dateFormat;
+-(NSDate *)dateFromFormat:(NSString *)dateFormat;
 
 
 

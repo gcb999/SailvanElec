@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JSPlaceOrderTableViewCellFrameModel.h"
+#import "JSPlaceOrderCollectionViewCellFrameModel.h"
 
-@interface JSPlaceOrderTableViewCell : UITableViewCell<JSTableViewCellDelegate>
+
+
+@interface JSPlaceOrderCollectionViewCell : UICollectionViewCell<JSCollectionViewCellDelegate>
 
 //1:背景图
 @property(nonatomic ,strong)UIImageView *bgImgView;
@@ -66,4 +68,11 @@
 //10:sold Out
 @property(nonatomic,strong)UIImageView *product_SoldOutImgview;
 
+//11： 线
+
+@property(nonatomic,strong)UIImageView *lineImgView;
+
 @end
+
+
+

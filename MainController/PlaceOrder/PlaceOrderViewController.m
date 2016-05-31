@@ -8,45 +8,85 @@
 //
 
 #import "PlaceOrderViewController.h"
-#import "JSPlaceOrderTableViewCell.h"
+#import "JSPlaceOrderCollectionViewCell.h"
+#import "JSWaterFlowLayout.h"
+
+@interface PlaceOrderViewController()<JSWaterFlowLayoutDelegate,JSCollectionViewControllerDelegate>{
+    
+  JSCollectionViewController *ctrl;
+}
+
+@end
 
 @implementation PlaceOrderViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
     
-    [self addBackBtn];
-    CGRect  rect =self.view.bounds;
     
     
-    JSTableViewController *ctrl=[[JSTableViewController alloc] initWithState:JSTableViewNormal tableViewCellClass:[JSPlaceOrderTableViewCell class] delegate:self];
-    ctrl.view.frame=rect;
+    
+    ctrl=[[JSCollectionViewController alloc] initWithState:JSCollectionViewNormal CollectionViewCellClass:[JSPlaceOrderCollectionViewCell class] delegate:self];
+    ctrl.pagingEnabled=YES;
+    
+    ctrl.view.frame=self.view.bounds;
+    
     
     [self.view addSubview:ctrl.view];
     [self addChildViewController:ctrl];
     
+    JSWaterFlowLayout *flowout=[[JSWaterFlowLayout alloc] init];
+    flowout.delegate=self;
+    ctrl.flowLayout=flowout;
+ 
+
+  
     
 }
 
 
--(void)JSTableViewController:(JSTableViewController *)JSCtrl LoadRequestCurrentPage:(NSInteger)currentPage{
+#pragma mark -实现网络请求数据
+
+-(void)JSCollectionViewController:(JSCollectionViewController *)SWCtrl LoadRequestCurrentPage:(NSInteger)currentPage{
     
     for (int i=0; i<10; i++) {
-        JSPlaceOrderTableViewCellFrameModel *frameModel=[[JSPlaceOrderTableViewCellFrameModel alloc] initWithDic:@{}];
-        [JSCtrl.data addObject:frameModel];
+        JSPlaceOrderCollectionViewCellFrameModel *frameModel=[[JSPlaceOrderCollectionViewCellFrameModel alloc] initWithDic:@{}];
+        [SWCtrl.data addObject:frameModel];
     }
 
 
-    [JSCtrl reloadHeader];
+    [SWCtrl reloadHeader];
     
 }
 
 
 
 
--(CGFloat)JSTableViewController:(JSTableViewController *)JSCtrl heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    JSPlaceOrderTableViewCellFrameModel *frameModel= JSCtrl.data[indexPath.row];
+
+
+
+
+#pragma mark -JSWaterFlowLayoutDelegate
+
+//设置每个Item高度
+- (CGFloat)waterflowLayout:(JSWaterFlowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth{
+    
+    JSPlaceOrderCollectionViewCellFrameModel *frameModel= ctrl.data[index];
     return frameModel.rowHeight;
+
+}
+
+//设置一行几列
+
+- (CGFloat)columnCountInWaterflowLayout:(JSWaterFlowLayout *)waterflowLayout;{
+    
+    return 1;
+    
+}
+
+#pragma mark-设置 section
+- (UIEdgeInsets)edgeInsetsInWaterflowLayout:(JSWaterFlowLayout *)waterflowLayout{
+    return UIEdgeInsetsMake(5, 5, 5, 5);
 }
 
 

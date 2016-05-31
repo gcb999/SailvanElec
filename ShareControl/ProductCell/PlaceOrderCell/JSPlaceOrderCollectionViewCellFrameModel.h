@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSPlaceOrderTableViewCellModel.h"
+#import "JSPlaceOrderCollectionViewCellModel.h"
 
-@interface JSPlaceOrderTableViewCellFrameModel : NSObject
+@interface JSPlaceOrderCollectionViewCellFrameModel : NSObject
 
 
 //1: 背景图片坐标
@@ -61,15 +61,18 @@
 
 @property(nonatomic ,assign,readonly) CGRect product_SoldOut_Frame;
 
+//9:线
+@property(nonatomic ,assign,readonly) CGRect product_line_Frame;
 
-//9; 行高
+
+//10; 行高
 @property(nonatomic,assign,readonly)CGFloat rowHeight;
 
 
-@property(nonatomic,strong)JSPlaceOrderTableViewCellModel *model;
+@property(nonatomic,strong)JSPlaceOrderCollectionViewCellModel *model;
 
 
--(JSPlaceOrderTableViewCellFrameModel *)initWithDic:(NSDictionary *)dic;
+-(JSPlaceOrderCollectionViewCellFrameModel *)initWithDic:(NSDictionary *)dic;
 
 
 

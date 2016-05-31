@@ -1,15 +1,14 @@
 //
-//  NSData+stringFromDate.m
-//  JSThridPod
+//  NSDate+stringFromDate.m
+//  SailvanElec
 //
-//  Created by gcb999 on 16/5/18.
-//  Copyright © 2016年 gcb999. All rights reserved.
+//  Created by gcb999 on 16/5/31.
+//  Copyright © 2016年 com.sailvan.gcb999. All rights reserved.
 //
 
-#import "NSData+stringFromDate.h"
+#import "NSDate+stringFromDate.h"
 
-@implementation NSData (stringFromDate)
-
+@implementation NSDate (stringFromDate)
 
 #pragma mark - 日期装换字符串
 
@@ -33,8 +32,5 @@
     NSLog(@"%@",currentDateString);
     return currentDateString;
 }
-
-
-
 
 @end

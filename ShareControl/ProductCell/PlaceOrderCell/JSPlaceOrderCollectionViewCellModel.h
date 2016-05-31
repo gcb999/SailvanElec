@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSPlaceOrderTableViewCellModel : NSObject
+@interface JSPlaceOrderCollectionViewCellModel : NSObject
 
 //1:大图
 @property(nonatomic ,copy)NSString *product_Url;
@@ -57,6 +57,6 @@
 @property(nonatomic,assign)BOOL is_free_shipping;//商品是否免邮
 
 
--(JSPlaceOrderTableViewCellModel *)initWithDic:(NSDictionary *)dic;
+-(JSPlaceOrderCollectionViewCellModel *)initWithDic:(NSDictionary *)dic;
 
 @end

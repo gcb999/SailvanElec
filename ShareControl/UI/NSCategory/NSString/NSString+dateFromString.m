@@ -13,21 +13,23 @@
 
 #pragma mark - 日期装换字符串
 
--(NSDate *)dateFromString:(NSString *)dateString{
+-(NSDate *)dateFromString{
     
     
-    return  [self dateFromString:dateString dateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    return [self dateFromFormat:@"yyyy-MM-dd HH:mm:ss"];
+
+    
     
     
 }
 
--(NSDate *)dateFromString:(NSString *)dateString dateFormat:(NSString *)dateFormat{
+-(NSDate *)dateFromFormat:(NSString *)dateFormat{
     
     //设置转换格式
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
     [formatter setDateFormat:dateFormat];
     //NSString转NSDate
-    NSDate *date=[formatter dateFromString:dateString];
+    NSDate *date=[formatter dateFromString:self];
     
     return date;
 }

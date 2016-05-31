@@ -6,16 +6,16 @@
 //  Copyright © 2016年 com.sailvan.gcb999. All rights reserved.
 //
 
-#import "JSPlaceOrderTableViewCellFrameModel.h"
+#import "JSPlaceOrderCollectionViewCellFrameModel.h"
 #define KJSPlaceOrderPadding 5
 
-@implementation JSPlaceOrderTableViewCellFrameModel
+@implementation JSPlaceOrderCollectionViewCellFrameModel
 
--(JSPlaceOrderTableViewCellFrameModel *)initWithDic:(NSDictionary *)dic{
+-(JSPlaceOrderCollectionViewCellFrameModel *)initWithDic:(NSDictionary *)dic{
     
     if (self=[super init]) {
         
-        self.model=[[JSPlaceOrderTableViewCellModel alloc] initWithDic:dic];
+        self.model=[[JSPlaceOrderCollectionViewCellModel alloc] initWithDic:dic];
         
         CGRect hrect,lrect,rect=CGRectMake(0, 0, IPHONScreenWidth, 100000);
         
@@ -110,7 +110,7 @@
              _product_DiscountPrice_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, KJSPlaceOrderPadding, 0, 0));//折扣价
          }
         
-        //5:闪购
+        //5:闪购 图片大小 30*30
         if (self.model.is_FlashGo) {
             CGRectDivide(rect, &hrect, &rect, 30, CGRectMinYEdge);
             CGRect flashgoRect;
@@ -127,8 +127,9 @@
             _product_flashGo_Lable_Frame=CGRectZero;
             
         }
-        //6:免邮
+        //6:免邮 图片大小 30*30
         if(self.model.is_free_shipping){
+            
             CGRectDivide(rect, &hrect, &rect, 30, CGRectMinYEdge);
             CGRect freeshippingRect;
             CGRectDivide(hrect, &freeshippingRect, &hrect, 30, CGRectMinXEdge);
@@ -141,7 +142,7 @@
               _product_freeshipping_Frame=CGRectZero;
         }
         
-        //7:soldOut
+        //7:soldOut 图片大小 30*30
         if (self.model.is_SoldOut) {
             
             CGRectDivide(rect, &hrect, &rect, 30, CGRectMinYEdge);
@@ -156,9 +157,21 @@
             _product_SoldOut_Frame=CGRectZero;
             
         }
+//        //间距
+//          CGRectDivide(rect, &hrect, &rect, 5, CGRectMinYEdge);
+//        
+        //8: 线
+      
+        CGRect lineRect;
+        CGRectDivide(rect, &lineRect, &rect, 1, CGRectMinYEdge);
+//        _product_line_Frame=CGRectMake(0,0, IPHONScreenWidth, lineRect.origin.y+lineRect.size.height);
         
  
-        
+        //最后要把rowHeight适当添加高度
+        _rowHeight+=20;
+        if (_rowHeight<=_product_Url_Frame.size.height) {
+            _rowHeight+=_product_Url_Frame.size.height+20;
+        }
         
     }
     return self;

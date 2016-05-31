@@ -42,7 +42,7 @@
 //----日期--------
 
 #import "NSDate+Extend.h"
-#import "NSData+stringFromDate.h"
+#import "NSDate+stringFromDate.h"
 
 
 

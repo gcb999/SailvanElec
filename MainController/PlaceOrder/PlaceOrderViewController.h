@@ -8,6 +8,6 @@
 
 #import "JSBasicViewController.h"
 
-@interface PlaceOrderViewController : JSBasicViewController<JSTableViewControllerDelegate>
+@interface PlaceOrderViewController : JSBasicViewController
 
 @end

@@ -113,7 +113,7 @@
     [self isShowPrice:hrect];
     
     //控制折扣显示与隐藏
-    [self isShowDiscount];
+//    [self isShowDiscount];
     
     
     

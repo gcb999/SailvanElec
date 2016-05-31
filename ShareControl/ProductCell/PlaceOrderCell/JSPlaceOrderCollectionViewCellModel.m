@@ -6,11 +6,11 @@
 //  Copyright © 2016年 com.sailvan.gcb999. All rights reserved.
 //
 
-#import "JSPlaceOrderTableViewCellModel.h"
+#import "JSPlaceOrderCollectionViewCellModel.h"
 
-@implementation JSPlaceOrderTableViewCellModel
+@implementation JSPlaceOrderCollectionViewCellModel
 
--(JSPlaceOrderTableViewCellModel *)initWithDic:(NSDictionary *)dic{
+-(JSPlaceOrderCollectionViewCellModel *)initWithDic:(NSDictionary *)dic{
     
     if (self=[super init]) {
         
@@ -45,9 +45,12 @@
         //卖光
         self.is_SoldOut=YES;
         
-        //闪购
+#pragma mark - 闪购
         self.is_FlashGo=YES;
-        self.product_flashGo_Time=@"00:23:34:00";
+                
+        self.product_flashGo_Time=@"2016-06-1 03:07:10";
+        
+        
         
         //免邮
         self.is_free_shipping=YES;

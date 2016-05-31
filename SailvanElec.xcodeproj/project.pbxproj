@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9000CD7D1CFD339C007C888D /* NSDate+stringFromDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9000CD7C1CFD339C007C888D /* NSDate+stringFromDate.m */; };
 		900EDD241CF940A500E6FFB5 /* JSItemImgageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */; };
 		90405FF81CFBCA2A0050C056 /* JSItemImageViewTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */; };
 		904060001CFBD9040050C056 /* JSProductViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FFF1CFBD9040050C056 /* JSProductViewCell.m */; };
-		904060031CFC0D110050C056 /* JSPlaceOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060021CFC0D110050C056 /* JSPlaceOrderTableViewCell.m */; };
-		904060061CFC13BC0050C056 /* JSPlaceOrderTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060051CFC13BC0050C056 /* JSPlaceOrderTableViewCellModel.m */; };
-		904060091CFC1A7E0050C056 /* JSPlaceOrderTableViewCellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060081CFC1A7E0050C056 /* JSPlaceOrderTableViewCellFrameModel.m */; };
+		904060031CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060021CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m */; };
+		904060061CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060051CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m */; };
+		904060091CFC1A7E0050C056 /* JSPlaceOrderCollectionViewCellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060081CFC1A7E0050C056 /* JSPlaceOrderCollectionViewCellFrameModel.m */; };
 		9040600D1CFC36010050C056 /* PlaceOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9040600C1CFC36010050C056 /* PlaceOrderViewController.m */; };
 		904C38951CF558D3004A8855 /* HYBBaseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388A1CF558D3004A8855 /* HYBBaseTransition.m */; };
 		904C38961CF558D3004A8855 /* HYBBubbleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C388C1CF558D3004A8855 /* HYBBubbleTransition.m */; };
@@ -73,7 +74,6 @@
 		907F82241CF2F7C10023F98B /* CoreArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81A51CF2F7C10023F98B /* CoreArchive.m */; };
 		907F82251CF2F7C10023F98B /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81A81CF2F7C10023F98B /* MBProgressHUD+Add.m */; };
 		907F82261CF2F7C10023F98B /* NSArray+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81AB1CF2F7C10023F98B /* NSArray+Extend.m */; };
-		907F82271CF2F7C10023F98B /* NSData+stringFromDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81AE1CF2F7C10023F98B /* NSData+stringFromDate.m */; };
 		907F82281CF2F7C10023F98B /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81B01CF2F7C10023F98B /* NSDate+Extend.m */; };
 		907F82291CF2F7C10023F98B /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81B31CF2F7C10023F98B /* NSDictionary+Extension.m */; };
 		907F822A1CF2F7C10023F98B /* NSMutableAttributedString+CBAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81B61CF2F7C10023F98B /* NSMutableAttributedString+CBAttributedString.m */; };
@@ -131,18 +131,20 @@
 
 /* Begin PBXFileReference section */
 		56B71F6C63715BDD0E68EFAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9000CD7B1CFD339C007C888D /* NSDate+stringFromDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+stringFromDate.h"; sourceTree = "<group>"; };
+		9000CD7C1CFD339C007C888D /* NSDate+stringFromDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+stringFromDate.m"; sourceTree = "<group>"; };
 		900EDD221CF940A500E6FFB5 /* JSItemImgageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImgageViewCell.h; sourceTree = "<group>"; };
 		900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImgageViewCell.m; sourceTree = "<group>"; };
 		90405FF61CFBCA2A0050C056 /* JSItemImageViewTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImageViewTransition.h; sourceTree = "<group>"; };
 		90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImageViewTransition.m; sourceTree = "<group>"; };
 		90405FFE1CFBD9040050C056 /* JSProductViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductViewCell.h; sourceTree = "<group>"; };
 		90405FFF1CFBD9040050C056 /* JSProductViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductViewCell.m; sourceTree = "<group>"; };
-		904060011CFC0D110050C056 /* JSPlaceOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPlaceOrderTableViewCell.h; sourceTree = "<group>"; };
-		904060021CFC0D110050C056 /* JSPlaceOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPlaceOrderTableViewCell.m; sourceTree = "<group>"; };
-		904060041CFC13BC0050C056 /* JSPlaceOrderTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPlaceOrderTableViewCellModel.h; sourceTree = "<group>"; };
-		904060051CFC13BC0050C056 /* JSPlaceOrderTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPlaceOrderTableViewCellModel.m; sourceTree = "<group>"; };
-		904060071CFC1A7E0050C056 /* JSPlaceOrderTableViewCellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPlaceOrderTableViewCellFrameModel.h; sourceTree = "<group>"; };
-		904060081CFC1A7E0050C056 /* JSPlaceOrderTableViewCellFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPlaceOrderTableViewCellFrameModel.m; sourceTree = "<group>"; };
+		904060011CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPlaceOrderCollectionViewCell.h; sourceTree = "<group>"; };
+		904060021CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPlaceOrderCollectionViewCell.m; sourceTree = "<group>"; };
+		904060041CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPlaceOrderCollectionViewCellModel.h; sourceTree = "<group>"; };
+		904060051CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPlaceOrderCollectionViewCellModel.m; sourceTree = "<group>"; };
+		904060071CFC1A7E0050C056 /* JSPlaceOrderCollectionViewCellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPlaceOrderCollectionViewCellFrameModel.h; sourceTree = "<group>"; };
+		904060081CFC1A7E0050C056 /* JSPlaceOrderCollectionViewCellFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPlaceOrderCollectionViewCellFrameModel.m; sourceTree = "<group>"; };
 		9040600B1CFC36010050C056 /* PlaceOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceOrderViewController.h; sourceTree = "<group>"; };
 		9040600C1CFC36010050C056 /* PlaceOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceOrderViewController.m; sourceTree = "<group>"; };
 		904C38891CF558D3004A8855 /* HYBBaseTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBaseTransition.h; sourceTree = "<group>"; };
@@ -268,8 +270,6 @@
 		907F81A81CF2F7C10023F98B /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		907F81AA1CF2F7C10023F98B /* NSArray+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extend.h"; sourceTree = "<group>"; };
 		907F81AB1CF2F7C10023F98B /* NSArray+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extend.m"; sourceTree = "<group>"; };
-		907F81AD1CF2F7C10023F98B /* NSData+stringFromDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+stringFromDate.h"; sourceTree = "<group>"; };
-		907F81AE1CF2F7C10023F98B /* NSData+stringFromDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+stringFromDate.m"; sourceTree = "<group>"; };
 		907F81AF1CF2F7C10023F98B /* NSDate+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extend.h"; sourceTree = "<group>"; };
 		907F81B01CF2F7C10023F98B /* NSDate+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extend.m"; sourceTree = "<group>"; };
 		907F81B21CF2F7C10023F98B /* NSDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
@@ -417,12 +417,12 @@
 		90405FFB1CFBD8E00050C056 /* PlaceOrderCell */ = {
 			isa = PBXGroup;
 			children = (
-				904060011CFC0D110050C056 /* JSPlaceOrderTableViewCell.h */,
-				904060021CFC0D110050C056 /* JSPlaceOrderTableViewCell.m */,
-				904060041CFC13BC0050C056 /* JSPlaceOrderTableViewCellModel.h */,
-				904060051CFC13BC0050C056 /* JSPlaceOrderTableViewCellModel.m */,
-				904060071CFC1A7E0050C056 /* JSPlaceOrderTableViewCellFrameModel.h */,
-				904060081CFC1A7E0050C056 /* JSPlaceOrderTableViewCellFrameModel.m */,
+				904060011CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.h */,
+				904060021CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m */,
+				904060041CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.h */,
+				904060051CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m */,
+				904060071CFC1A7E0050C056 /* JSPlaceOrderCollectionViewCellFrameModel.h */,
+				904060081CFC1A7E0050C056 /* JSPlaceOrderCollectionViewCellFrameModel.m */,
 			);
 			path = PlaceOrderCell;
 			sourceTree = "<group>";
@@ -966,10 +966,10 @@
 		907F81AC1CF2F7C10023F98B /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
-				907F81AD1CF2F7C10023F98B /* NSData+stringFromDate.h */,
-				907F81AE1CF2F7C10023F98B /* NSData+stringFromDate.m */,
 				907F81AF1CF2F7C10023F98B /* NSDate+Extend.h */,
 				907F81B01CF2F7C10023F98B /* NSDate+Extend.m */,
+				9000CD7B1CFD339C007C888D /* NSDate+stringFromDate.h */,
+				9000CD7C1CFD339C007C888D /* NSDate+stringFromDate.m */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -1447,7 +1447,7 @@
 				900EDD241CF940A500E6FFB5 /* JSItemImgageViewCell.m in Sources */,
 				907F82001CF2F7C10023F98B /* JSUserSingletonModel.m in Sources */,
 				907F820C1CF2F7C10023F98B /* JSNinaPagerViewConfig.m in Sources */,
-				904060031CFC0D110050C056 /* JSPlaceOrderTableViewCell.m in Sources */,
+				904060031CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m in Sources */,
 				907F82221CF2F7C10023F98B /* CALayer+Anim.m in Sources */,
 				907F82091CF2F7C10023F98B /* JSBasicViewController.m in Sources */,
 				907F82261CF2F7C10023F98B /* NSArray+Extend.m in Sources */,
@@ -1467,14 +1467,14 @@
 				907F82391CF2F7C10023F98B /* NSObject+SDWebImage.m in Sources */,
 				90405FF81CFBCA2A0050C056 /* JSItemImageViewTransition.m in Sources */,
 				907F82321CF2F7C10023F98B /* UIImage+Color.m in Sources */,
-				907F82271CF2F7C10023F98B /* NSData+stringFromDate.m in Sources */,
 				907F821A1CF2F7C10023F98B /* JSStretchableTableHeaderView.m in Sources */,
 				907F82061CF2F7C10023F98B /* JSApplePay.m in Sources */,
 				907F823E1CF2F7C10023F98B /* NinaPagerView.m in Sources */,
 				907F823F1CF2F7C10023F98B /* UIView+ViewController.m in Sources */,
+				9000CD7D1CFD339C007C888D /* NSDate+stringFromDate.m in Sources */,
 				907F82101CF2F7C10023F98B /* JSCollectionViewController+NotWorkView.m in Sources */,
 				904C38991CF558D3004A8855 /* HYBMoveTransition.m in Sources */,
-				904060091CFC1A7E0050C056 /* JSPlaceOrderTableViewCellFrameModel.m in Sources */,
+				904060091CFC1A7E0050C056 /* JSPlaceOrderCollectionViewCellFrameModel.m in Sources */,
 				907F822A1CF2F7C10023F98B /* NSMutableAttributedString+CBAttributedString.m in Sources */,
 				907F821C1CF2F7C10023F98B /* JSTableViewController+NotWorkView.m in Sources */,
 				907F820A1CF2F7C10023F98B /* JSPresentCommonViewCtrl.m in Sources */,
@@ -1490,7 +1490,7 @@
 				904C38971CF558D3004A8855 /* HYBEaseInOutTransition.m in Sources */,
 				907F82641CF408090023F98B /* UIViewController+NavigationItem.m in Sources */,
 				907F82141CF2F7C10023F98B /* JSLineLayout.m in Sources */,
-				904060061CFC13BC0050C056 /* JSPlaceOrderTableViewCellModel.m in Sources */,
+				904060061CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m in Sources */,
 				907F82161CF2F7C10023F98B /* WeChatStylePlaceHolder.m in Sources */,
 				907F81001CF2F6890023F98B /* AppDelegate.m in Sources */,
 				907F82151CF2F7C10023F98B /* JSWaterFlowLayout.m in Sources */,

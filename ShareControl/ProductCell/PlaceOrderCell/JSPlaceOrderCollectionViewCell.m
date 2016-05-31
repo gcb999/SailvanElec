@@ -6,21 +6,22 @@
 //  Copyright © 2016年 com.sailvan.gcb999. All rights reserved.
 //
 
-#import "JSPlaceOrderTableViewCell.h"
+#import "JSPlaceOrderCollectionViewCell.h"
 
 
-@interface JSPlaceOrderTableViewCell ()
+@interface JSPlaceOrderCollectionViewCell ()
 
-@property(nonatomic,strong)JSPlaceOrderTableViewCellFrameModel *frameModel;
+@property(nonatomic,strong)JSPlaceOrderCollectionViewCellFrameModel *frameModel;
 
 @end
 
-@implementation JSPlaceOrderTableViewCell
+@implementation JSPlaceOrderCollectionViewCell
 
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    self = [super initWithFrame:frame];
+    if (self) {
         
         
         
@@ -111,7 +112,11 @@
         self.product_Free_Imgview=[UIImageView ImageViewImageName:@"free_shipping_new" frame:CGRectZero];
         [self.bgImgView addSubview:self.product_Free_Imgview];
         
-        
+        //线
+        self.lineImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
+        self.lineImgView.layer.borderColor=rgb(230, 230, 231).CGColor;
+        self.lineImgView.layer.borderWidth=0.25f;
+        [self.bgImgView addSubview:self.lineImgView];
         
         
         
@@ -122,16 +127,17 @@
 }
 
 
--(void)JSTableViewController:(JSTableViewController *)SWCtrl TableViewDateArr:(NSArray *)dateArr cellValue:(id)date indexPath:(NSIndexPath *)indexpath{
+-(void)JSCollectionViewController:(JSCollectionViewController *)JSCtrl collectionViewDateArr:(NSArray *)dateArr cellValue:(id)date indexPath:(NSIndexPath *)indexpath{
 
-    self.frameModel=SWCtrl.data[indexpath.row];
-    JSPlaceOrderTableViewCellModel *model =self.frameModel.model;
+    self.frameModel=JSCtrl.data[indexpath.row];
+    JSPlaceOrderCollectionViewCellModel *model =self.frameModel.model;
    
     //1: 商品图片
     [self loadingSmallPlaceholderImageName:model.product_Url imgview:self.productImgView];
     
     //2：商品折扣
-    self.product_Discount_Lable.text=model.product_Discount;
+        NSString *str=[NSString stringWithFormat:@"-%d%%",indexpath.row*8];
+    self.product_Discount_Lable.text=str;//model.product_Discount;
     
     
     //3:标题
@@ -152,14 +158,43 @@
     
     
     //7：闪购时间
-    self.product_flashGo_label.text=model.product_flashGo_Time;
-    
+//    self.product_flashGo_label.text=model.product_flashGo_Time;
+    [self setFlashGo];
     
     
     
     
 
 }
+
+
+#pragma mark -赋值
+-(void)setFlashGo{
+    
+    
+    //服务器记录时间
+    NSDate *severDate=[self.frameModel.model.product_flashGo_Time dateFromString];
+    if (self.frameModel.model.is_FlashGo) {//是闪购商品
+           NSDate *nowDate=[NSDate date];
+           long  tempcounttime=[severDate timeIntervalSinceDate:nowDate];//现在时间-服务器记录时间
+            if(tempcounttime>0){//正常时间
+                
+                NSInteger seconds = tempcounttime% 60;
+                NSInteger minutes = (tempcounttime / 60) % 60;
+                NSInteger hours = (tempcounttime / 3600);
+                NSString *timeString = [NSString stringWithFormat:@"%.2ld:%.2ld:%.2ld", (long)hours, (long)minutes, (long)seconds];
+                self.product_flashGo_label.text=timeString;
+                
+            }
+            else{//超时,重新请求服务器
+                
+            
+            }
+        
+    }
+}
+
+
 
 
 
@@ -184,8 +219,8 @@
     self.product_Discount_ImgView.frame=self.frameModel.product_Discount_ImgView_Frame;;
     
   //4：折扣文字
-    self.product_Discount_Lable.frame=CGRectMake(0, 0, 28, 28);
-    self.product_Discount_Lable.transform=CGAffineTransformMakeRotation(M_PI*0.38);//必须加入
+    self.product_Discount_Lable.frame=self.frameModel.product_Discount_Label_Frame;
+    self.product_Discount_Lable.transform=CGAffineTransformMakeRotation(-M_PI/4);//必须加入
     
    
 #pragma mark -右边坐标布局
@@ -221,6 +256,8 @@
     //7：卖光
     self.product_SoldOutImgview.frame=self.frameModel.product_SoldOut_Frame;
     
+    //线
+    self.lineImgView.frame=self.frameModel.product_line_Frame;
  
     
 }
