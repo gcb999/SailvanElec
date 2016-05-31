@@ -114,8 +114,8 @@
         
         //线
         self.lineImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
-        self.lineImgView.layer.borderColor=rgb(230, 230, 231).CGColor;
-        self.lineImgView.layer.borderWidth=0.25f;
+        self.lineImgView.layer.borderColor=KborderColor.CGColor;
+        self.lineImgView.layer.borderWidth=0.5f;
         [self.bgImgView addSubview:self.lineImgView];
         
         

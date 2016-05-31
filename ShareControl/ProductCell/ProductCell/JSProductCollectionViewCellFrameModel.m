@@ -56,7 +56,7 @@
     
     CGRect hrect;
     
-   
+    rect=UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(0, 2, 0, 2));
     //1: 闪购
     if(self.model.is_FlashGo){
         CGRectDivide(rect, &hrect, &rect, 30, CGRectMinYEdge);

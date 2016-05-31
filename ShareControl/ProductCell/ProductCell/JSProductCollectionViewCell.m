@@ -26,12 +26,12 @@
     self = [super initWithFrame:frame];
     if (self) {
        
-        self.layer.borderWidth=0.26f;
-        self.layer.borderColor=KborderColor.CGColor;
-        self.backgroundColor=[UIColor whiteColor];
+
         
   #pragma mark -大背景图片
         self.bgImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
+        self.bgImgView.layer.borderWidth=0.5f;
+        self.bgImgView.layer.borderColor=KborderColor.CGColor;
         [self.contentView addSubview: self.bgImgView];
         
 #pragma mark -闪购图片
