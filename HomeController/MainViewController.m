@@ -38,8 +38,8 @@
 -(NSArray *)titles{
     
     NSArray *titleArray =   @[
-                              @"女装",
-                              @"男装",
+                              @"商品",
+                              @"商品列表",
                               @"PL"
                               ];
     
@@ -56,7 +56,7 @@
     
     NSArray *vcsArray = @[
                           @"HomeViewController",
-                          @"LeftViewController",
+                          @"JSProductProductListController",
                           @"PlaceOrderViewController"
                      
                           ];

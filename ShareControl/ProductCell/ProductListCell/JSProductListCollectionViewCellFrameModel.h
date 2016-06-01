@@ -1,16 +1,15 @@
 //
-//  JSPlaceOrderCollectionViewCell_FrameModel.h
+//  JSProductListCollectionViewCellFrameModel.h
 //  SailvanElec
 //
-//  Created by gcb999 on 16/5/30.
-//  assign,readonlyright © 2016年 com.sailvan.gcb999. All rights reserved.
+//  Created by gcb999 on 16/6/1.
+//  Copyright © 2016年 com.sailvan.gcb999. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "JSPlaceOrderCollectionViewCellModel.h"
+#import "JSProductListCollectionViewCellModel.h"
 
-@interface JSPlaceOrderCollectionViewCellFrameModel : NSObject
-
+@interface JSProductListCollectionViewCellFrameModel : NSObject
 
 
 
@@ -66,14 +65,16 @@
 @property(nonatomic,assign,readonly)CGFloat rowHeight;
 
 
-@property(nonatomic,strong)JSPlaceOrderCollectionViewCellModel *model;
+@property(nonatomic,strong)JSProductListCollectionViewCellModel *model;
 
 
--(JSPlaceOrderCollectionViewCellFrameModel *)initWithDic:(NSDictionary *)dic;
+-(JSProductListCollectionViewCellFrameModel *)initWithDic:(NSDictionary *)dic;
 
 
 #pragma mark -通过Model 重新算坐标
--(void)layoutModel:(JSPlaceOrderCollectionViewCellModel *)model;
+-(void)layoutModel:(JSProductListCollectionViewCellModel *)model;
+
+
 
 
 

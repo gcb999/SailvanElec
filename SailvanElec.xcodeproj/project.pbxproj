@@ -112,6 +112,10 @@
 		907F82641CF408090023F98B /* UIViewController+NavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F82631CF408090023F98B /* UIViewController+NavigationItem.m */; };
 		907F826A1CF442D90023F98B /* JSCollectionViewController+UIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F82691CF442D90023F98B /* JSCollectionViewController+UIScrollView.m */; };
 		907F826D1CF44ABE0023F98B /* JSTableViewController+UIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F826C1CF44ABE0023F98B /* JSTableViewController+UIScrollView.m */; };
+		9080572A1CFE815C00635C87 /* JSProductProductListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908057291CFE815C00635C87 /* JSProductProductListController.m */; };
+		9080572D1CFE83E100635C87 /* JSProductListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9080572C1CFE83E100635C87 /* JSProductListCollectionViewCell.m */; };
+		908057301CFE841000635C87 /* JSProductListCollectionViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9080572F1CFE841000635C87 /* JSProductListCollectionViewCellModel.m */; };
+		908057331CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 908057321CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.m */; };
 		E73931B779A2CC92C0699369 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1040033C81510B872892E2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -365,6 +369,14 @@
 		907F82691CF442D90023F98B /* JSCollectionViewController+UIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCollectionViewController+UIScrollView.m"; sourceTree = "<group>"; };
 		907F826B1CF44ABE0023F98B /* JSTableViewController+UIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSTableViewController+UIScrollView.h"; sourceTree = "<group>"; };
 		907F826C1CF44ABE0023F98B /* JSTableViewController+UIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSTableViewController+UIScrollView.m"; sourceTree = "<group>"; };
+		908057281CFE815C00635C87 /* JSProductProductListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductProductListController.h; sourceTree = "<group>"; };
+		908057291CFE815C00635C87 /* JSProductProductListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductProductListController.m; sourceTree = "<group>"; };
+		9080572B1CFE83E100635C87 /* JSProductListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductListCollectionViewCell.h; sourceTree = "<group>"; };
+		9080572C1CFE83E100635C87 /* JSProductListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductListCollectionViewCell.m; sourceTree = "<group>"; };
+		9080572E1CFE841000635C87 /* JSProductListCollectionViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductListCollectionViewCellModel.h; sourceTree = "<group>"; };
+		9080572F1CFE841000635C87 /* JSProductListCollectionViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductListCollectionViewCellModel.m; sourceTree = "<group>"; };
+		908057311CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductListCollectionViewCellFrameModel.h; sourceTree = "<group>"; };
+		908057321CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductListCollectionViewCellFrameModel.m; sourceTree = "<group>"; };
 		B9D40446286FF62DB07406F1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA1040033C81510B872892E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -461,6 +473,12 @@
 		90405FFD1CFBD8E00050C056 /* ProductListCell */ = {
 			isa = PBXGroup;
 			children = (
+				9080572B1CFE83E100635C87 /* JSProductListCollectionViewCell.h */,
+				9080572C1CFE83E100635C87 /* JSProductListCollectionViewCell.m */,
+				9080572E1CFE841000635C87 /* JSProductListCollectionViewCellModel.h */,
+				9080572F1CFE841000635C87 /* JSProductListCollectionViewCellModel.m */,
+				908057311CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.h */,
+				908057321CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.m */,
 			);
 			path = ProductListCell;
 			sourceTree = "<group>";
@@ -1201,6 +1219,7 @@
 		907F82501CF303DB0023F98B /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				908057271CFE813700635C87 /* productList */,
 				9040600A1CFC35EC0050C056 /* PlaceOrder */,
 				907F82541CF3071B0023F98B /* HomeViewController.h */,
 				907F82551CF3071B0023F98B /* HomeViewController.m */,
@@ -1234,6 +1253,15 @@
 				904C38881CF558D3004A8855 /* HYBControllerTransitions */,
 			);
 			path = Aniamtion;
+			sourceTree = "<group>";
+		};
+		908057271CFE813700635C87 /* productList */ = {
+			isa = PBXGroup;
+			children = (
+				908057281CFE815C00635C87 /* JSProductProductListController.h */,
+				908057291CFE815C00635C87 /* JSProductProductListController.m */,
+			);
+			path = productList;
 			sourceTree = "<group>";
 		};
 		E2814CB537863966A2E349A9 /* Frameworks */ = {
@@ -1429,6 +1457,7 @@
 				907F81FF1CF2F7C10023F98B /* UIViewController+ThreeDTouch.m in Sources */,
 				904C38A81CF5AC22004A8855 /* JSBigItemImageViewController.m in Sources */,
 				907F823D1CF2F7C10023F98B /* NinaBaseView.m in Sources */,
+				9080572A1CFE815C00635C87 /* JSProductProductListController.m in Sources */,
 				907F82301CF2F7C10023F98B /* UIDevice+Extend.m in Sources */,
 				907F82241CF2F7C10023F98B /* CoreArchive.m in Sources */,
 				907F822D1CF2F7C10023F98B /* NSString+Extend.m in Sources */,
@@ -1436,6 +1465,7 @@
 				907F81031CF2F6890023F98B /* ViewController.m in Sources */,
 				907F822E1CF2F7C10023F98B /* NSString+Password.m in Sources */,
 				907F824A1CF2F8470023F98B /* MainViewController.m in Sources */,
+				908057331CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.m in Sources */,
 				907F81FE1CF2F7C10023F98B /* AppDelegate+ThridDTouch.m in Sources */,
 				904C38A51CF59338004A8855 /* JSItemImageViewController.m in Sources */,
 				904C389D1CF57812004A8855 /* HomeDetailVIewController.m in Sources */,
@@ -1483,6 +1513,7 @@
 				907F822F1CF2F7C10023F98B /* UIColor+Extend.m in Sources */,
 				904C38951CF558D3004A8855 /* HYBBaseTransition.m in Sources */,
 				907F82191CF2F7C10023F98B /* UITableView+CYLTableViewPlaceHolder.m in Sources */,
+				908057301CFE841000635C87 /* JSProductListCollectionViewCellModel.m in Sources */,
 				907F821F1CF2F7C10023F98B /* JSTableViewController+TableView.m in Sources */,
 				904060001CFBD9040050C056 /* JSProductCollectionViewCell.m in Sources */,
 				9040600D1CFC36010050C056 /* PlaceOrderViewController.m in Sources */,
@@ -1516,6 +1547,7 @@
 				904C38971CF558D3004A8855 /* HYBEaseInOutTransition.m in Sources */,
 				907F82641CF408090023F98B /* UIViewController+NavigationItem.m in Sources */,
 				907F82141CF2F7C10023F98B /* JSLineLayout.m in Sources */,
+				9080572D1CFE83E100635C87 /* JSProductListCollectionViewCell.m in Sources */,
 				904060061CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m in Sources */,
 				907F82161CF2F7C10023F98B /* WeChatStylePlaceHolder.m in Sources */,
 				907F81001CF2F6890023F98B /* AppDelegate.m in Sources */,

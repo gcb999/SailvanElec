@@ -1,23 +1,25 @@
 //
-//  JSPlaceOrderCollectionViewCellFrameModel.m
+//  JSProductListCollectionViewCellFrameModel.m
 //  SailvanElec
 //
-//  Created by gcb999 on 16/5/30.
+//  Created by gcb999 on 16/6/1.
 //  Copyright © 2016年 com.sailvan.gcb999. All rights reserved.
 //
 
-#import "JSPlaceOrderCollectionViewCellFrameModel.h"
-#define KJSPlaceOrderPadding 5
+#import "JSProductListCollectionViewCellFrameModel.h"
 
-@implementation JSPlaceOrderCollectionViewCellFrameModel
+#define KJSProductListPadding 5
 
--(JSPlaceOrderCollectionViewCellFrameModel *)initWithDic:(NSDictionary *)dic{
+@implementation JSProductListCollectionViewCellFrameModel
+
+
+-(JSProductListCollectionViewCellFrameModel *)initWithDic:(NSDictionary *)dic{
     
     if (self=[super init]) {
         
-        self.model=[[JSPlaceOrderCollectionViewCellModel alloc] initWithDic:dic];
+        self.model=[[JSProductListCollectionViewCellModel alloc] initWithDic:dic];
         [self layoutModel:self.model];
-
+        
         
     }
     return self;
@@ -25,10 +27,10 @@
     
 }
 
--(void)layoutModel:(JSPlaceOrderCollectionViewCellModel *)model{
-
+-(void)layoutModel:(JSProductListCollectionViewCellModel *)model{
     
-       self.model=model;
+    
+    self.model=model;
     
     CGRect hrect,lrect,rect=CGRectMake(0, 0, IPHONScreenWidth, 100000);
     
@@ -106,6 +108,7 @@
     else{
         _product_Quntity_Frame=CGRectZero;
     }
+
     
 #pragma mark - 6: 优惠价与原价
     if (!IS_NSString(self.model.product_DiscountPrice)) {//特价为空
@@ -132,8 +135,8 @@
             
             CGRectDivide(hrect, &priceRect, &hrect, 40, CGRectMinXEdge);
             
-            _product_Price_Frame=UIEdgeInsetsInsetRect(priceRect, UIEdgeInsetsMake(0, 0, 0, KJSPlaceOrderPadding));//原价
-            _product_DiscountPrice_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, KJSPlaceOrderPadding, 0, 0));//折扣价
+            _product_Price_Frame=UIEdgeInsetsInsetRect(priceRect, UIEdgeInsetsMake(0, 0, 0, KJSProductListPadding));//原价
+            _product_DiscountPrice_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, KJSProductListPadding, 0, 0));//折扣价
         }
         
     }
@@ -144,7 +147,7 @@
         CGRect flashgoRect;
         CGRectDivide(hrect, &flashgoRect, &hrect, 30, CGRectMinXEdge);
         _product_flashGo_ImgView_Frame=flashgoRect;
-        _product_flashGo_Lable_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, KJSPlaceOrderPadding, 0, 0));
+        _product_flashGo_Lable_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, KJSProductListPadding, 0, 0));
         
         _rowHeight+=30;
         
@@ -185,10 +188,8 @@
         _product_SoldOut_Frame=CGRectZero;
         
     }
-    
-    
-    
-  #pragma mark -10： 最后判断图片的高度与商品图片的高度进行比较
+
+#pragma mark -10： 最后判断图片的高度与商品图片的高度进行比较
     
     if (_rowHeight<=_product_Url_Frame.size.height) {
         _rowHeight=_product_Url_Frame.size.height+5;
@@ -202,9 +203,10 @@
     
     //设置线坐标
     _product_line_Frame=CGRectMake(0,_rowHeight, IPHONScreenWidth,1 );
-    
-#pragma mark -12：最好加入适当高度
+
+    #pragma mark -12：最好加入适当高度
     _rowHeight+=5;
 
 }
+
 @end
