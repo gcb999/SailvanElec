@@ -8,8 +8,9 @@
 
 #import "JSDIYButton.h"
 
-#define KJSDIYImageView 0.5
-#define KJSDIYPadding 0
+#define KJSDIYImgViewWidth 40
+#define KJSDIYImgViewHeight 40
+
 
 @implementation JSDIYButton
 
@@ -36,17 +37,17 @@
 }
 
 -(CGRect)imageRectForContentRect:(CGRect)contentRect{
-    CGFloat width=contentRect.size.width;
-    CGFloat height=contentRect.size.height;
-    return CGRectMake(KJSDIYPadding,0 , width*KJSDIYImageView, height);
+//    CGFloat width=contentRect.size.width;
+//    CGFloat height=contentRect.size.height;
+    return CGRectMake(0,0,KJSDIYImgViewWidth,KJSDIYImgViewHeight);//图片大小40 *40
     
 }
 
 -(CGRect)titleRectForContentRect:(CGRect)contentRect{
     CGFloat width=contentRect.size.width;
     CGFloat height=contentRect.size.height;
-    CGFloat x=width*(KJSDIYImageView)+KJSDIYPadding+KJSDIYPadding;
-    return CGRectMake(x, 0, width-x, height);
+    
+    return CGRectMake(KJSDIYImgViewWidth, 0, width-KJSDIYImgViewWidth, height);
 }
 
 @end

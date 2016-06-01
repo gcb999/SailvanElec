@@ -38,7 +38,7 @@
         
         //5：是否edit和buy按钮
         if (self.model.is_edit_buy) {
-               _rowHeight+=35;
+               _rowHeight+=40;
         }
 
         
@@ -142,7 +142,7 @@
     
     if (self.model.is_edit_buy) {
         
-        CGRectDivide(rect, &hrect, &rect, 35, CGRectMinYEdge);
+        CGRectDivide(rect, &hrect, &rect, 40, CGRectMinYEdge);
         
         CGRect edit_buy_Rect;
         CGFloat width=hrect.size.width*0.5f;

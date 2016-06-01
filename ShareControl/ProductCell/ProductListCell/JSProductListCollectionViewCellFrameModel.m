@@ -193,8 +193,8 @@
     
     if (self.model.is_edit_buy) {
         
-        CGRectDivide(rect, &hrect, &rect, 35, CGRectMinYEdge);
-        _rowHeight+=35;
+        CGRectDivide(rect, &hrect, &rect, 40, CGRectMinYEdge);
+        _rowHeight+=40;
         
         CGRect edit_buy_Rect;
         CGFloat width=hrect.size.width*0.5f;
