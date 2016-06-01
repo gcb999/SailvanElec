@@ -188,6 +188,27 @@
         _product_SoldOut_Frame=CGRectZero;
         
     }
+    
+    //edit,Buy
+    
+    if (self.model.is_edit_buy) {
+        
+        CGRectDivide(rect, &hrect, &rect, 35, CGRectMinYEdge);
+        _rowHeight+=35;
+        
+        CGRect edit_buy_Rect;
+        CGFloat width=hrect.size.width*0.5f;
+        CGRectDivide(hrect, &edit_buy_Rect, &hrect,width,CGRectMinXEdge);
+        _edit_Frame=UIEdgeInsetsInsetRect(edit_buy_Rect, UIEdgeInsetsMake(0, 0, 0, 2));//编辑
+        _buy_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, 0, 0, 0));//buy
+        
+    }
+    else{
+        _edit_Frame=CGRectZero;
+        _buy_Frame=CGRectZero;
+    }
+ 
+    
 
 #pragma mark -10： 最后判断图片的高度与商品图片的高度进行比较
     

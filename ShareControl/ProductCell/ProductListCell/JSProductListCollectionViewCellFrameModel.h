@@ -57,7 +57,14 @@
 
 @property(nonatomic ,assign,readonly) CGRect product_SoldOut_Frame;
 
-#pragma mark -10： 线
+
+#pragma mark - Edit和Buy
+@property(nonatomic ,assign,readonly) CGRect edit_Frame;
+
+@property(nonatomic ,assign,readonly) CGRect buy_Frame;
+
+
+#pragma mark - 线
 @property(nonatomic ,assign,readonly) CGRect product_line_Frame;
 
 

@@ -54,6 +54,8 @@
 #pragma mark -9:免邮
         self.is_free_shipping=NO;
         
+        self.is_edit_buy=YES;
+        
         
         
         

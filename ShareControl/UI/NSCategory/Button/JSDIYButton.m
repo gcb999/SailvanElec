@@ -24,10 +24,13 @@
         self.adjustsImageWhenDisabled=NO;
         self.adjustsImageWhenHighlighted=NO;
         self.imageView.contentMode=UIViewContentModeScaleAspectFit;
+        
        
         //设置title
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         self.titleLabel.font=KNormalFontSize;
+        self.titleLabel.textAlignment=NSTextAlignmentLeft;
+        self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     }
     return self;
 }

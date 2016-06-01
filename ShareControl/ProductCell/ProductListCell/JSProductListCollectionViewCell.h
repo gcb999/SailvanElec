@@ -55,7 +55,16 @@
 @property(nonatomic,strong)UIImageView *product_SoldOutImgview;
 
 
-#pragma mark -10： 线
+#pragma mark -  Edit和Buy
+
+@property(nonatomic,strong)JSDIYButton *editBtn;
+@property(nonatomic,strong)JSDIYButton *buyBtn;
+
+
+
+
+
+#pragma mark - 线
 @property(nonatomic,strong)UIImageView *lineImgView;
 
 

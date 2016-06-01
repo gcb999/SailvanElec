@@ -111,7 +111,26 @@
         self.product_SoldOutImgview=[UIImageView ImageViewImageName:@"sout" frame:CGRectZero];
         [self.bgImgView addSubview:self.product_SoldOutImgview];
         
-#pragma mark -10： 线
+        
+#pragma mark - Edit和Buy
+        
+        self.editBtn=[[JSDIYButton alloc] initWithFrame:CGRectZero];
+        [self.editBtn setImage:[UIImage imageNamed:@"nav_cart_Green"] forState:UIControlStateNormal];
+        [self.editBtn setTitle:@"Edit" forState:UIControlStateNormal];
+        self.editBtn.layer.cornerRadius=4;
+//        self.editBtn.backgroundColor=rgb(236, 236, 236);
+        [self.editBtn addTarget:self action:@selector(edit:) forControlEvents:UIControlEventTouchUpInside];
+        [self.bgImgView addSubview:self.editBtn];
+        
+        self.buyBtn=[[JSDIYButton alloc] initWithFrame:CGRectZero];
+        [self.buyBtn setImage:[UIImage imageNamed:@"nav_cart_Green"] forState:UIControlStateNormal];
+        [self.buyBtn setTitle:@"buy" forState:UIControlStateNormal];
+        self.buyBtn.layer.cornerRadius=4;
+//        self.buyBtn.backgroundColor=rgb(236, 236, 236);
+        [self.buyBtn addTarget:self action:@selector(buy:) forControlEvents:UIControlEventTouchUpInside];
+        [self.bgImgView addSubview:self.buyBtn];
+        
+#pragma mark - 线
         
         self.lineImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
         self.lineImgView.layer.borderColor=KborderColor.CGColor;
@@ -263,12 +282,28 @@
 #pragma mark -9:sold Out
     self.product_SoldOutImgview.frame=self.frameModel.product_SoldOut_Frame;
     
+#pragma mark -  Edit和Buy
+    self.editBtn.frame=self.frameModel.edit_Frame;
+    self.buyBtn.frame=self.frameModel.buy_Frame;
     
-#pragma mark -10： 线
+#pragma mark - 线
     self.lineImgView.frame=self.frameModel.product_line_Frame;
     
     
 }
+
+
+
+-(void)edit:(UIButton *)btn{
+    
+    
+}
+
+-(void)buy:(UIButton *)btn{
+    
+    
+}
+
 
 @end
 

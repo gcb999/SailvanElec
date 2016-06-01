@@ -50,8 +50,11 @@
 @property(nonatomic,assign)BOOL is_free_shipping;//商品是否免邮
 
 
-#pragma mark -9:sold Out
+#pragma mark -sold Out
 @property(nonatomic ,assign)BOOL is_SoldOut;
+
+#pragma mark - Edit和Buy
+@property(nonatomic,assign)BOOL is_edit_buy;
 
 -(JSProductListCollectionViewCellModel *)initWithDic:(NSDictionary *)dic;
 
