@@ -21,11 +21,11 @@
         
 #pragma mark -左边
         
-        //1：商品图片大小
+#pragma mark - 1:商品图片
         _product_Url_Frame=CGRectMake(0, 0, 120, 120);
         
         
-        //2:折扣图片 和文字
+#pragma mark -2:左上角折扣/价格
         if(self.model.is_Discount){
 
             _product_Discount_ImgView_Frame=CGRectMake(0, 0, 40, 40);
@@ -44,14 +44,14 @@
         CGRectDivide(rect, &lrect, &rect,width , CGRectMinXEdge);
         rect=UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(0, 5, 0, 5));
 
-        //1: 标题
+#pragma mark - 3: 标题
         CGRectDivide(rect, &hrect, &rect, 40, CGRectMinYEdge);
         _product_Title_Frame=hrect;
         
         _rowHeight+=40;
         
         
-        //2: color,type,size
+#pragma mark - 4: color,size ,type
 
         if(IS_NSString(self.model.product_Color)){
             CGRectDivide(rect, &hrect, &rect, 20, CGRectMinYEdge);
@@ -84,13 +84,12 @@
             _product_Type_Frame=CGRectZero;
         }
         
-        //3:数量
+#pragma mark -5: 数量
         CGRectDivide(rect, &hrect, &rect, 20, CGRectMinYEdge);
         _product_Quntity_Frame=hrect;
         _rowHeight+=20;
         
-        //4:原价和特价
-        
+#pragma mark - 6: 优惠价与原价
         if (!IS_NSString(self.model.product_DiscountPrice)) {//特价为空
             
        
@@ -121,7 +120,7 @@
             
         }
         
-        //5:闪购 图片大小 30*30
+#pragma mark -7：闪购时间和图片 图片大小 30*30
         if (self.model.is_FlashGo) {
             CGRectDivide(rect, &hrect, &rect, 30, CGRectMinYEdge);
             CGRect flashgoRect;
@@ -138,7 +137,7 @@
             _product_flashGo_Lable_Frame=CGRectZero;
             
         }
-        //6:免邮 图片大小 30*30
+#pragma mark -8:免邮 图片大小 30*30
         if(self.model.is_free_shipping){
             
             CGRectDivide(rect, &hrect, &rect, 30, CGRectMinYEdge);
@@ -153,7 +152,7 @@
               _product_freeshipping_Frame=CGRectZero;
         }
         
-        //7:soldOut 图片大小 30*30
+#pragma mark -9:sold Out 图片大小 30*30
         if (self.model.is_SoldOut) {
             
             CGRectDivide(rect, &hrect, &rect, 30, CGRectMinYEdge);
@@ -172,7 +171,8 @@
         //间距
         CGRectDivide(rect, &hrect, &rect, 10, CGRectMinYEdge);
          _rowHeight+=10;
-        //8: 线
+        
+#pragma mark -10： 线
       
         CGRect lineRect;
         CGRectDivide(rect, &lineRect, &rect, 1, CGRectMinYEdge);

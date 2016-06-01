@@ -25,19 +25,17 @@
         
    
 
-        //背景图片
+      #pragma mark - 0:背景图
         self.bgImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
         [self.contentView addSubview: self.bgImgView];
         
         
-        
-        //商品图片
-        
+#pragma mark - 1:商品图片
         self.productImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
         [ self.bgImgView addSubview:self.productImgView];
         
         
- #pragma mark - 左上角折扣
+#pragma mark -2:左上角折扣/价格
         
         //左上角 折扣图片
         CGSize size=CGSizeMake(40, 40);
@@ -55,12 +53,12 @@
         [self.product_Discount_ImgView addSubview:self.product_Discount_Lable];
    
         
-        //标题
+#pragma mark - 3: 标题
         self.product_Title_Lable=[UILabel LabWithFrame:CGRectZero text:@"商品标题" textColor:[UIColor blackColor] textAlign:NSTextAlignmentCenter  font:KNormalFontSize];
         self.product_Title_Lable.numberOfLines=2;
         [self.bgImgView addSubview:self.product_Title_Lable];
         
-#pragma mark - color,size,type,数量
+#pragma mark - 4: color,size ,type
         
         self.product_Color_Lable=[UILabel LabWithFrame:CGRectZero text:@"Color:" textColor:[UIColor blackColor] textAlign:NSTextAlignmentLeft  font:KNormalFontSize];
         [self.bgImgView addSubview:self.product_Color_Lable];
@@ -71,14 +69,12 @@
         self.product_Type_Lable=[UILabel LabWithFrame:CGRectZero text:@"Type" textColor:[UIColor blackColor] textAlign:NSTextAlignmentLeft  font:KNormalFontSize];
         [self.bgImgView addSubview:self.product_Type_Lable];
         
-        
+#pragma mark -5: 数量
         self.product_Quntity_Lable=[UILabel LabWithFrame:CGRectZero text:@"数量" textColor:[UIColor blackColor] textAlign:NSTextAlignmentLeft  font:KNormalFontSize];
         [self.bgImgView addSubview:self.product_Quntity_Lable];
         
         
-#pragma mark -价格
-        
-        
+#pragma mark - 6: 优惠价与原价
         //原价
         self.product_Price_Label=[UILabel LabWithFrame:CGRectZero text:@"" textColor:[UIColor blackColor] textAlign:NSTextAlignmentLeft font:KNormalFontSize];
         [ self.bgImgView addSubview:self.product_Price_Label];
@@ -89,7 +85,7 @@
         [ self.bgImgView addSubview:self.product_DiscountPrice_Label];
         
         
-#pragma mark -闪购图片和时间
+#pragma mark -7：闪购时间和图片
         
         //闪购 图片
         self.product_flashGo_ImgView=[UIImageView ImageViewImageName:@"ti" frame:CGRectZero];
@@ -100,19 +96,23 @@
         [self.bgImgView addSubview:self.product_flashGo_label];
 
         
-        
-#pragma mark -sold Out
-        self.product_SoldOutImgview=[UIImageView ImageViewImageName:@"sout" frame:CGRectZero];
-        [self.bgImgView addSubview:self.product_SoldOutImgview];
+
 
 
         
         
-#pragma mark -免邮
+#pragma mark -8:免邮
         self.product_Free_Imgview=[UIImageView ImageViewImageName:@"free_shipping_new" frame:CGRectZero];
         [self.bgImgView addSubview:self.product_Free_Imgview];
         
-        //线
+        
+        
+#pragma mark -9:sold Out
+        self.product_SoldOutImgview=[UIImageView ImageViewImageName:@"sout" frame:CGRectZero];
+        [self.bgImgView addSubview:self.product_SoldOutImgview];
+        
+#pragma mark -10： 线
+        
         self.lineImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
         self.lineImgView.layer.borderColor=KborderColor.CGColor;
         self.lineImgView.layer.borderWidth=0.5f;
@@ -131,33 +131,36 @@
 
     self.frameModel=JSCtrl.data[indexpath.row];
     JSPlaceOrderCollectionViewCellModel *model =self.frameModel.model;
-   
-    //1: 商品图片
+
+#pragma mark - 1:商品图片
     [self loadingSmallPlaceholderImageName:model.product_Url imgview:self.productImgView];
     
-    //2：商品折扣
+
+#pragma mark -2:左上角折扣/价格
         NSString *str=[NSString stringWithFormat:@"-%d%%",indexpath.row*8];
     self.product_Discount_Lable.text=str;//model.product_Discount;
     
     
-    //3:标题
+#pragma mark - 3: 标题
     self.product_Title_Lable.text=model.product_Title;
     
-    //4: color,size,type
+    
+#pragma mark - 4: color,size ,type
     self.product_Color_Lable.text=model.product_Color;
     self.product_Size_Lable.text=model.product_Size;
     self.product_Type_Lable.text=model.product_Type;
     
-    //5：数量
+#pragma mark -5: 数量
     self.product_Quntity_Lable.text=model.product_Quntity;
     
-    //6:原价与特价
+    
+#pragma mark - 6: 优惠价与原价
     NSMutableAttributedString *attr=[[NSMutableAttributedString alloc] init];
     self.product_Price_Label.attributedText= [attr attributedStringWithtitle:model.product_Price Font:KNormalFontSize color:[UIColor grayColor] isShowUnderlineStyle:NO isStrikethroughStyle:YES];
     self.product_DiscountPrice_Label.text=model.product_DiscountPrice;
     
     
-    //7：闪购时间
+#pragma mark -7：闪购时间和图片
 //    self.product_flashGo_label.text=model.product_flashGo_Time;
     [self setFlashGo];
     
@@ -168,7 +171,7 @@
 }
 
 
-#pragma mark -赋值
+#pragma mark -闪购赋值
 -(void)setFlashGo{
     
     
@@ -206,19 +209,20 @@
  
 #pragma mark -左边坐标布局
     
-    //1:背景图坐标
+#pragma mark - 0:背景图坐标
     self.bgImgView.frame=self.contentView.bounds;
     
     
     
-    //2:商品图片坐标
+#pragma mark - 1:商品图片坐标
   
     self.productImgView.frame=self.frameModel.product_Url_Frame;
 
-    //3:折扣图片
+#pragma mark -2:左上角折扣/价格
+    //折扣图片
     self.product_Discount_ImgView.frame=self.frameModel.product_Discount_ImgView_Frame;;
     
-  //4：折扣文字
+  //折扣文字
     self.product_Discount_Lable.frame=self.frameModel.product_Discount_Label_Frame;
     self.product_Discount_Lable.transform=CGAffineTransformMakeRotation(-M_PI/4);//必须加入
     
@@ -226,37 +230,41 @@
 #pragma mark -右边坐标布局
     
   
-    //1: 标题
-
+#pragma mark - 3: 标题
     self.product_Title_Lable.frame=self.frameModel.product_Title_Frame;
     
-    //2: color type,size
+    
+#pragma mark - 4: color,size ,type
     self.product_Color_Lable.frame=self.frameModel.product_Color_Frame;
-    
     self.product_Type_Lable.frame=self.frameModel.product_Size_Frame;
-    
     self.product_Size_Lable.frame=self.frameModel.product_Type_Frame;
     
-    //3：数量
+    
+#pragma mark -5: 数量
     self.product_Quntity_Lable.frame=self.frameModel.product_Quntity_Frame;
     
-    //4: 价格和特价
+    
+#pragma mark - 6: 优惠价与原价
     self.product_Price_Label.frame=self.frameModel.product_Price_Frame;
     self.product_DiscountPrice_Label.frame=self.frameModel.product_DiscountPrice_Frame;
     
     
-    //5: 闪购时间和图片
+    
+#pragma mark -7：闪购时间和图片
     self.product_flashGo_ImgView.frame=self.frameModel.product_flashGo_ImgView_Frame;
     self.product_flashGo_label.frame=self.frameModel.product_flashGo_Lable_Frame;
     
     
-    //6：免邮
+    
+#pragma mark -8:免邮
     self.product_Free_Imgview.frame=self.frameModel.product_freeshipping_Frame;
     
-    //7：卖光
+    
+#pragma mark -9:sold Out
     self.product_SoldOutImgview.frame=self.frameModel.product_SoldOut_Frame;
     
-    //线
+    
+#pragma mark -10： 线
     self.lineImgView.frame=self.frameModel.product_line_Frame;
  
     

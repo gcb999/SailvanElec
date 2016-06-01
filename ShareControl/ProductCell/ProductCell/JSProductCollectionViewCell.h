@@ -12,36 +12,40 @@
 @interface JSProductCollectionViewCell : UICollectionViewCell<JSCollectionViewCellDelegate>
 
 
-//1:背景图
+#pragma mark -0:背景图
 @property(nonatomic ,strong)UIImageView *bgImgView;
 
-//8：闪购时间
+#pragma mark -1：闪购时间
 @property(nonatomic,strong)UILabel *product_flashGo_label;
 
-//2:大图
+#pragma mark - 2:商品图
 @property(nonatomic ,strong)UIImageView *productImgView;
 
 
-//3:左上角折扣/价格
+#pragma mark - 3: SOLD OUT
+@property(nonatomic,strong)UIImageView *product_SoldOut_ImgView;
 
+
+#pragma mark - 4:左上角折扣/价格
 @property(nonatomic,strong)UIImageView *product_Discount_ImgView;
 @property(nonatomic,strong)UILabel *product_Discount_Lable;
 
 
-
-//3: 标题
+#pragma mark - 5: 标题
 @property(nonatomic,strong)UILabel *product_Title_Lable;
 
-//4: 优惠价与原价
 
+#pragma mark - 6: 优惠价与原价
 @property(nonatomic ,strong)UILabel *product_Price_Label;
 @property(nonatomic ,strong)UILabel *product_DiscountPrice_Label;
 
-//5:编辑和购买
+
+#pragma mark - 7: Edit和Buy
 
 @property(nonatomic,strong)JSDIYButton *editBtn;
-
 @property(nonatomic,strong)JSDIYButton *buyBtn;
+
+
 
 
 @end

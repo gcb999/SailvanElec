@@ -10,51 +10,52 @@
 
 @interface JSPlaceOrderCollectionViewCellModel : NSObject
 
-//1:大图
+#pragma mark - 1:商品图片
 @property(nonatomic ,copy)NSString *product_Url;
 
 
-//2:左上角折扣/价格
+#pragma mark -2:左上角折扣/价格
 @property(nonatomic ,assign)BOOL is_Discount;
 @property(nonatomic ,copy)NSString *product_Discount;
 
 
-
-//3: 标题
+#pragma mark - 3: 标题
 @property(nonatomic ,copy)NSString *product_Title;
 
 
-//4: color,size ,type,数量
+#pragma mark - 4: color,size ,type
 @property(nonatomic ,copy)NSString *product_Color;
 
 @property(nonatomic ,copy)NSString *product_Size;
 
 @property(nonatomic ,copy)NSString *product_Type;
 
+
+
+#pragma mark -5: 数量
 @property(nonatomic ,copy)NSString *product_Quntity;
 
 
-
-
-
-//5: 优惠价与原价
-
+#pragma mark - 6: 优惠价与原价
 @property(nonatomic ,copy)NSString *product_Price;
 
 @property(nonatomic ,copy)NSString *product_DiscountPrice;
 
 
-//6：卖光
-@property(nonatomic ,assign)BOOL is_SoldOut;
-
-//7:闪购
+#pragma mark -7：闪购时间和图片
 @property(nonatomic ,assign)BOOL is_FlashGo;
 @property(nonatomic ,copy)NSString *product_flashGo_Time;//闪购时间
 
-
-
-//8:免邮
+#pragma mark -8:免邮
 @property(nonatomic,assign)BOOL is_free_shipping;//商品是否免邮
+
+
+#pragma mark -9:sold Out
+@property(nonatomic ,assign)BOOL is_SoldOut;
+
+
+
+
 
 
 -(JSPlaceOrderCollectionViewCellModel *)initWithDic:(NSDictionary *)dic;

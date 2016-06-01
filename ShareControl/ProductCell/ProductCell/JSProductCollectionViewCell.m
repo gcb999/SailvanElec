@@ -28,23 +28,31 @@
        
 
         
-  #pragma mark -大背景图片
+#pragma mark -0：大背景图片
+        
         self.bgImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
         self.bgImgView.layer.borderWidth=0.5f;
         self.bgImgView.layer.borderColor=KborderColor.CGColor;
         [self.contentView addSubview: self.bgImgView];
         
-#pragma mark -闪购图片
+#pragma mark -1：闪购图片
+        
         self.product_flashGo_label=[UILabel LabWithFrame:CGRectZero text:@"" textColor:[UIColor blackColor] textAlign:NSTextAlignmentCenter font:KNormalFontSize];
         [ self.bgImgView addSubview:self.product_flashGo_label];
         
-  #pragma mark -商品图片
+        
+#pragma mark -2：商品图片
         
         self.productImgView=[UIImageView ImageViewImageName:@"" frame:CGRectZero];
         [ self.bgImgView addSubview:self.productImgView];
        
         
-  #pragma mark -折扣
+#pragma mark - 3: SOLD OUT
+        
+        self.product_SoldOut_ImgView=[UIImageView ImageViewImageName:@"SOLD" frame:CGRectZero];
+        [ self.productImgView addSubview:self.product_SoldOut_ImgView];
+        
+ #pragma mark - 4:左上角折扣/价格
         
         //左上角 折扣图片
         CGSize size=CGSizeMake(40, 40);
@@ -61,16 +69,15 @@
 //        self.left_discount_lable.transform=CGAffineTransformMakeRotation(-M_PI/4);
         [self.product_Discount_ImgView addSubview:self.product_Discount_Lable];
         
+     
+#pragma mark - 5: 标题
         
-        
-        //标题
         self.product_Title_Lable=[UILabel LabWithFrame:CGRectZero text:@"" textColor:[UIColor blackColor] textAlign:NSTextAlignmentCenter font:KNormalFontSize];
         self.product_Title_Lable.numberOfLines=2;
         [ self.bgImgView addSubview:self.product_Title_Lable];
         
-#pragma mark -价格
         
-
+#pragma mark - 6: 优惠价与原价
         //原价
         self.product_Price_Label=[UILabel LabWithFrame:CGRectZero text:@"" textColor:[UIColor blackColor] textAlign:NSTextAlignmentCenter font:KNormalFontSize];
         [ self.bgImgView addSubview:self.product_Price_Label];
@@ -80,7 +87,7 @@
         self.product_DiscountPrice_Label=[UILabel LabWithFrame:CGRectZero text:@"" textColor:[UIColor blackColor] textAlign:NSTextAlignmentCenter font:[UIFont boldSystemFontOfSize:16]];
         [ self.bgImgView addSubview:self.product_DiscountPrice_Label];
         
-        //编辑和购买
+#pragma mark - 7: Edit和Buy
         
         self.editBtn=[[JSDIYButton alloc] initWithFrame:CGRectZero];
         [self.editBtn setImage:[UIImage imageNamed:@"nav_cart_Green"] forState:UIControlStateNormal];
@@ -114,23 +121,23 @@
     
     self.frameModel=JSCtrl.data[indexpath.row];
    
-    //1: 闪购
+#pragma mark - 1:闪购
     [self setFlashGo];
     
-    //1: 商品图片
+#pragma mark - 2:商品图片
     [self loadingSmallPlaceholderImageName:self.frameModel.model.product_Url imgview:self.productImgView];
     
-    //2：商品折扣
+#pragma mark - 3:左上角折扣
 //    NSString *str=[NSString stringWithFormat:@"-%d%%",indexpath.row*8];
     self.product_Discount_Lable.text=self.frameModel.model.product_Discount;
     
    
-    //3：标题
+#pragma mark - 4: 标题
     self.product_Title_Lable.text=self.frameModel.model.product_Title;
     
     
     
-    //6:原价与特价
+#pragma mark - 6: 优惠价与原价
     NSMutableAttributedString *attr=[[NSMutableAttributedString alloc] init];
     self.product_Price_Label.attributedText= [attr attributedStringWithtitle:self.frameModel.model.product_Price Font:KNormalFontSize color:[UIColor grayColor] isShowUnderlineStyle:NO isStrikethroughStyle:YES];
     self.product_DiscountPrice_Label.text=self.frameModel.model.product_DiscountPrice;
@@ -155,6 +162,37 @@
             NSString *timeString = [NSString stringWithFormat:@"%.2ld:%.2ld:%.2ld", (long)hours, (long)minutes, (long)seconds];
             self.product_flashGo_label.text=timeString;
             
+            
+            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:timeString];
+  
+            
+            
+            //字型
+            [string addAttribute:NSFontAttributeName value:KNormalFontSize range:NSMakeRange(0, 2)];
+            
+            [string addAttribute:NSFontAttributeName value:KNormalFontSize range:NSMakeRange(3, 2)];
+            
+             [string addAttribute:NSFontAttributeName value:KNormalFontSize range:NSMakeRange(6, 2)];
+            
+            //顏色
+
+            
+            [string addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, 2)];
+            
+            [string addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(3, 2)];
+            
+             [string addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(6, 2)];
+            
+            //背景顏色
+             [string addAttribute:NSBackgroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 2)];
+             
+             [string addAttribute:NSBackgroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(3, 2)];
+            
+             [string addAttribute:NSBackgroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(6, 2)];
+            
+             self.product_flashGo_label.attributedText=string;
+
+            
         }
         else{//超时,重新请求服务器
             
@@ -171,39 +209,42 @@
     
     CGRect  rect=self.contentView.bounds;
     
-    //1: 必须调用坐标
+#pragma mark - 0: 必须调用坐标
     [self.frameModel layoutSubviews:self.contentView.bounds];
+
     
-    
-    
-    //2:背景图坐标
+#pragma mark - 1:背景图坐标
     self.bgImgView.frame=rect;
     
-    
-    //3:闪购图片坐标
+#pragma mark - 2:闪购图片坐标
     self.product_flashGo_label.frame=self.frameModel.product_flashGo_Lable_Frame;
     
-    //3: 大图
+#pragma mark - 3:商品图片坐标
     self.productImgView.frame=self.frameModel.product_Url_Frame;
     
-    //4： 左上角折扣
-    self.product_Discount_ImgView.frame=self.frameModel.product_Discount_ImgView_Frame;
     
+#pragma mark - 4: SOLD OUT坐标
+    self.product_SoldOut_ImgView.frame=self.frameModel.product_SoldOut_ImgView_Frame;
+    
+#pragma mark - 5:左上角折扣坐标
+    self.product_Discount_ImgView.frame=self.frameModel.product_Discount_ImgView_Frame;
     self.product_Discount_Lable.frame=self.frameModel.product_Discount_Label_Frame;
     self.product_Discount_Lable.transform=CGAffineTransformMakeRotation(-M_PI/4);//必须加入
 
-    //5：标题
+    
+    
+#pragma mark - 6: 标题
     self.product_Title_Lable.frame=self.frameModel.product_Title_Frame;
     
 
-    //6：价钱
+#pragma mark - 7: 优惠价与原价
     self.product_Price_Label.frame=self.frameModel.product_Price_Frame;
     self.product_Price_Label.textAlignment=NSTextAlignmentRight;
     self.product_DiscountPrice_Label.frame=self.frameModel.product_DiscountPrice_Frame;
     self.product_DiscountPrice_Label.textAlignment=NSTextAlignmentLeft;
+
     
-    //7:edit,buy坐标
-    
+#pragma mark - 8: Edit和Buy
     self.editBtn.frame=self.frameModel.edit_Frame;
     self.buyBtn.frame=self.frameModel.buy_Frame;
 

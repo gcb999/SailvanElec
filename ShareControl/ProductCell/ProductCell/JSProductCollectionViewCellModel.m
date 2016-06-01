@@ -13,23 +13,27 @@
 -(JSProductCollectionViewCellModel *)initWithDic:(NSDictionary *)dic{
     
     if (self=[super init]) {
+    
+#pragma mark - 1：闪购
+        self.is_FlashGo=YES;
+        
+        self.product_flashGo_Time=@"2016-06-2 03:07:10";
         
         
-        //图片
+#pragma mark - 2:商品图片
         self.product_Url=@"http://img05.tooopen.com/images/20140506/sy_60405092566.jpg";
+       
         
-        //折扣
+#pragma mark 3:sold Out
+        self.is_SoldOut=YES;
+        
+        
+#pragma mark -4:左上角折扣/价格
         self.is_Discount=YES;
         self.product_Discount=@"-80%";
         
-       
-#pragma mark - 闪购
-        self.is_FlashGo=YES;
-        
-        self.product_flashGo_Time=@"2016-06-1 03:07:10";
-        
-        
-        
+
+  
         //标题
         self.product_Title=@"标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试";
         
@@ -47,8 +51,7 @@
         //卖光
         self.is_SoldOut=YES;
         
-        //免邮
-        self.is_free_shipping=YES;
+   
         
         
         

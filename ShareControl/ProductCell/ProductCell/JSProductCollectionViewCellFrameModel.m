@@ -70,6 +70,19 @@
     _product_Url_Frame=hrect;
     
     
+    //3：soldOut
+    
+    if (self.model.is_SoldOut) {
+        CGSize size=CGSizeMake(40, 40);
+        CGFloat x=_product_Url_Frame.size.width-size.width;
+        
+         _product_SoldOut_ImgView_Frame=CGRectMake(x,0 , size.width, size.height);
+    }
+    else{
+        _product_SoldOut_ImgView_Frame=CGRectZero;
+    }
+    
+    
     //3:折扣图片 和文字
     if(self.model.is_Discount){
         
@@ -82,7 +95,9 @@
         _product_Discount_Label_Frame=CGRectZero;
     }
     
- 
+   
+
+    
     
     //3: 标题
     if(IS_NSString(_model.product_Title)){
