@@ -55,7 +55,7 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-
+    self.lineImgView.frame=self.frameModel.product_line_Frame;
     
 }
 

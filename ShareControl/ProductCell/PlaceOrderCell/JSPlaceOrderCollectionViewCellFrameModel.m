@@ -188,13 +188,13 @@ CGRect hrect,lrect;
         CGRectDivide(rect, &hrect, &rect, 30, CGRectMinYEdge);
         CGRect soldOutRect;
         CGRectDivide(hrect, &soldOutRect, &hrect, 30, CGRectMinXEdge);
-        self.product_SoldOut_Frame=soldOutRect;
+        self.product_SoldOut_ImgView_Frame=soldOutRect;
         
         self.rowHeight+=30;
         
     }
     else{
-        self.product_SoldOut_Frame=CGRectZero;
+        self.product_SoldOut_ImgView_Frame=CGRectZero;
         
     }
     
@@ -212,8 +212,8 @@ CGRect hrect,lrect;
     CGRectDivide(rect, &hrect, &rect, 10, CGRectMinYEdge);
     self.rowHeight+=5;
     
-    //    //设置线坐标
-    //    self.product_line_Frame=CGRectMake(0,self.rowHeight, IPHONScreenWidth,1 );
+    //设置线坐标
+    self.product_line_Frame=CGRectMake(0,self.rowHeight, IPHONScreenWidth,1 );
     
 #pragma mark -12：最好加入适当高度
     self.rowHeight+=5;

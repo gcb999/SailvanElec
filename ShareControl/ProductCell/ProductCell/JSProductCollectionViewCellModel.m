@@ -17,7 +17,7 @@
 #pragma mark - 1：闪购
         self.is_FlashGo=YES;
         
-        self.product_flashGo_Time=@"2016-06-2 03:07:10";
+        self.product_flashGo_Time=@"2016-06-5 03:07:10";
         
         
 #pragma mark - 2:商品图片

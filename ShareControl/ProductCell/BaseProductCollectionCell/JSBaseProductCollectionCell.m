@@ -202,6 +202,10 @@
     [super layoutSubviews];
 
     CGRect rect =self.contentView.bounds;
+    
+
+    //重设高度
+    self.frameModel.rowHeight=0;
     [self.frameModel layoutSubFrame:rect];
   
     
@@ -260,7 +264,7 @@
     
     
 #pragma mark -9:sold Out
-    self.product_SoldOut_Imgview.frame=self.frameModel.product_SoldOut_Frame;
+    self.product_SoldOut_Imgview.frame=self.frameModel.product_SoldOut_ImgView_Frame;
     
     
     

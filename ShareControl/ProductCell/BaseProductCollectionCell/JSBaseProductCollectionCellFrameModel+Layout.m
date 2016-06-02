@@ -16,6 +16,7 @@
 -(void)layoutRowHeight:(JSBaseProductCollectionCellModel *)Model;
 {
     self.baseModel=Model;
+    self.rowHeight=0;
     [self layoutSubFrame:CGRectMake(0, 0, IPHONScreenWidth, 100000)];
 }
 
@@ -25,6 +26,7 @@
 
 -(void)layoutSubFrame:(CGRect)rect {
     
+    self.rowHeight=0;
     NSLog(@"---父类必须重新改方法")
     
 }

@@ -58,7 +58,7 @@
 
 #pragma mark -sold Out
 
-@property(nonatomic ,assign) CGRect product_SoldOut_Frame;
+@property(nonatomic ,assign) CGRect product_SoldOut_ImgView_Frame;
 
 
 

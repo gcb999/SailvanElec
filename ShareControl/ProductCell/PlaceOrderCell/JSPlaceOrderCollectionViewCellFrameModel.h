@@ -20,11 +20,10 @@
 
 #pragma mark -实体
 @property(nonatomic,strong)JSPlaceOrderCollectionViewCellModel *model;
-//
-//
-//#pragma mark-UI坐标
-//
-//@property(nonatomic ,assign) CGRect product_line_Frame;
+
+#pragma mark-UI坐标
+
+@property(nonatomic ,assign) CGRect product_line_Frame;
 
 
 

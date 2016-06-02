@@ -189,8 +189,36 @@
 
 
 
+#pragma mark -----------自定义商品Cell--------------------
 
+#import "JSBaseProductCollectionCellModel.h"//实体类
 
+#import "JSBaseProductCollectionCellFrameModel.h"//实体布局类
+
+#import "JSBaseProductCollectionCellFrameModel+Layout.h"//实体布局扩展类
+
+#import "JSBaseProductCollectionCell.h"//商品类
+
+/*
+
+一：JSBaseProductCollectionCell用法
+ 
+A: 先继承 JSBaseProductCollectionCell
+ 
+B： 调用[super JSCollectionViewController:JSCtrl collectionViewDateArr:dateArr cellValue:date indexPath:indexpath];
+
+ 
+二：JSBaseProductCollectionCellFrameModel
+ 
+ 
+A: 重写Cell的高度
+ -(void)layoutRowHeight:(JSBaseProductCollectionCellModel *)frameModel;
+ 
+B: 重新算Cell坐标
+ -(void)layoutSubFrame:(CGRect)rect ;
+ 
+ 
+ */
 
 
 
