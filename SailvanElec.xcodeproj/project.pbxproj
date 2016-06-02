@@ -27,6 +27,7 @@
 		904C389D1CF57812004A8855 /* HomeDetailVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C389C1CF57812004A8855 /* HomeDetailVIewController.m */; };
 		904C38A51CF59338004A8855 /* JSItemImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38A41CF59338004A8855 /* JSItemImageViewController.m */; };
 		904C38A81CF5AC22004A8855 /* JSBigItemImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38A71CF5AC22004A8855 /* JSBigItemImageViewController.m */; };
+		905B84111CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B84101CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.m */; };
 		907F80FD1CF2F6890023F98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FC1CF2F6890023F98B /* main.m */; };
 		907F81001CF2F6890023F98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FF1CF2F6890023F98B /* AppDelegate.m */; };
 		907F81031CF2F6890023F98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81021CF2F6890023F98B /* ViewController.m */; };
@@ -116,6 +117,9 @@
 		9080572D1CFE83E100635C87 /* JSProductListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9080572C1CFE83E100635C87 /* JSProductListCollectionViewCell.m */; };
 		908057301CFE841000635C87 /* JSProductListCollectionViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9080572F1CFE841000635C87 /* JSProductListCollectionViewCellModel.m */; };
 		908057331CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 908057321CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.m */; };
+		908057371CFEC16E00635C87 /* JSBaseProductCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 908057361CFEC16E00635C87 /* JSBaseProductCollectionCell.m */; };
+		9080573A1CFEC27100635C87 /* JSBaseProductCollectionCellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 908057391CFEC27100635C87 /* JSBaseProductCollectionCellFrameModel.m */; };
+		9080573D1CFEC27A00635C87 /* JSBaseProductCollectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9080573C1CFEC27A00635C87 /* JSBaseProductCollectionCellModel.m */; };
 		E73931B779A2CC92C0699369 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1040033C81510B872892E2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -178,6 +182,8 @@
 		904C38A41CF59338004A8855 /* JSItemImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImageViewController.m; sourceTree = "<group>"; };
 		904C38A61CF5AC22004A8855 /* JSBigItemImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBigItemImageViewController.h; sourceTree = "<group>"; };
 		904C38A71CF5AC22004A8855 /* JSBigItemImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBigItemImageViewController.m; sourceTree = "<group>"; };
+		905B840F1CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSBaseProductCollectionCellFrameModel+Layout.h"; sourceTree = "<group>"; };
+		905B84101CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSBaseProductCollectionCellFrameModel+Layout.m"; sourceTree = "<group>"; };
 		907F80F81CF2F6890023F98B /* SailvanElec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SailvanElec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		907F80FC1CF2F6890023F98B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		907F80FE1CF2F6890023F98B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -377,6 +383,12 @@
 		9080572F1CFE841000635C87 /* JSProductListCollectionViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductListCollectionViewCellModel.m; sourceTree = "<group>"; };
 		908057311CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductListCollectionViewCellFrameModel.h; sourceTree = "<group>"; };
 		908057321CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProductListCollectionViewCellFrameModel.m; sourceTree = "<group>"; };
+		908057351CFEC16E00635C87 /* JSBaseProductCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseProductCollectionCell.h; sourceTree = "<group>"; };
+		908057361CFEC16E00635C87 /* JSBaseProductCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseProductCollectionCell.m; sourceTree = "<group>"; };
+		908057381CFEC27100635C87 /* JSBaseProductCollectionCellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseProductCollectionCellFrameModel.h; sourceTree = "<group>"; };
+		908057391CFEC27100635C87 /* JSBaseProductCollectionCellFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseProductCollectionCellFrameModel.m; sourceTree = "<group>"; };
+		9080573B1CFEC27A00635C87 /* JSBaseProductCollectionCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseProductCollectionCellModel.h; sourceTree = "<group>"; };
+		9080573C1CFEC27A00635C87 /* JSBaseProductCollectionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseProductCollectionCellModel.m; sourceTree = "<group>"; };
 		B9D40446286FF62DB07406F1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA1040033C81510B872892E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -429,6 +441,7 @@
 		90405FF91CFBD8950050C056 /* ProductCell */ = {
 			isa = PBXGroup;
 			children = (
+				908057341CFEC14F00635C87 /* BaseProductCollectionCell */,
 				90405FFA1CFBD8E00050C056 /* CarCell */,
 				90405FFB1CFBD8E00050C056 /* PlaceOrderCell */,
 				90405FFC1CFBD8E00050C056 /* ProductCell */,
@@ -1264,6 +1277,21 @@
 			path = productList;
 			sourceTree = "<group>";
 		};
+		908057341CFEC14F00635C87 /* BaseProductCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				908057351CFEC16E00635C87 /* JSBaseProductCollectionCell.h */,
+				908057361CFEC16E00635C87 /* JSBaseProductCollectionCell.m */,
+				908057381CFEC27100635C87 /* JSBaseProductCollectionCellFrameModel.h */,
+				908057391CFEC27100635C87 /* JSBaseProductCollectionCellFrameModel.m */,
+				9080573B1CFEC27A00635C87 /* JSBaseProductCollectionCellModel.h */,
+				9080573C1CFEC27A00635C87 /* JSBaseProductCollectionCellModel.m */,
+				905B840F1CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.h */,
+				905B84101CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.m */,
+			);
+			path = BaseProductCollectionCell;
+			sourceTree = "<group>";
+		};
 		E2814CB537863966A2E349A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1470,6 +1498,7 @@
 				904C38A51CF59338004A8855 /* JSItemImageViewController.m in Sources */,
 				904C389D1CF57812004A8855 /* HomeDetailVIewController.m in Sources */,
 				907F822C1CF2F7C10023F98B /* NSString+dateFromString.m in Sources */,
+				9080573D1CFEC27A00635C87 /* JSBaseProductCollectionCellModel.m in Sources */,
 				907F820B1CF2F7C10023F98B /* JSPresentView.m in Sources */,
 				907F82371CF2F7C10023F98B /* UIView+Extend.m in Sources */,
 				907F82231CF2F7C10023F98B /* CALayer+Transition.m in Sources */,
@@ -1490,9 +1519,11 @@
 				907F823B1CF2F7C10023F98B /* NSObject+Utilty.m in Sources */,
 				907F820F1CF2F7C10023F98B /* JSCollectionViewController+MJRefresh.m in Sources */,
 				907F82291CF2F7C10023F98B /* NSDictionary+Extension.m in Sources */,
+				9080573A1CFEC27100635C87 /* JSBaseProductCollectionCellFrameModel.m in Sources */,
 				907F82281CF2F7C10023F98B /* NSDate+Extend.m in Sources */,
 				907F82131CF2F7C10023F98B /* JSBaseFlowLayout.m in Sources */,
 				907F82021CF2F7C10023F98B /* JSError.m in Sources */,
+				905B84111CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.m in Sources */,
 				907F824F1CF2FD610023F98B /* LeftTableViewCell.m in Sources */,
 				907F82011CF2F7C10023F98B /* JSMD5.m in Sources */,
 				904C38981CF558D3004A8855 /* HYBModalTransition.m in Sources */,
@@ -1516,6 +1547,7 @@
 				908057301CFE841000635C87 /* JSProductListCollectionViewCellModel.m in Sources */,
 				907F821F1CF2F7C10023F98B /* JSTableViewController+TableView.m in Sources */,
 				904060001CFBD9040050C056 /* JSProductCollectionViewCell.m in Sources */,
+				908057371CFEC16E00635C87 /* JSBaseProductCollectionCell.m in Sources */,
 				9040600D1CFC36010050C056 /* PlaceOrderViewController.m in Sources */,
 				907F82381CF2F7C10023F98B /* UIWindow+Launch.m in Sources */,
 				907F82121CF2F7C10023F98B /* JSCollectionViewController.m in Sources */,

@@ -198,7 +198,7 @@
         
         CGRect edit_buy_Rect;
         CGFloat width=hrect.size.width*0.5f;
-        CGRectDivide(hrect, &edit_buy_Rect, &hrect,width,CGRectMinXEdge);
+        CGRectDivide(hrect, &edit_buy_Rect, &hrect,80,CGRectMinXEdge);
         _edit_Frame=UIEdgeInsetsInsetRect(edit_buy_Rect, UIEdgeInsetsMake(0, 0, 0, 2));//编辑
         _buy_Frame=UIEdgeInsetsInsetRect(hrect, UIEdgeInsetsMake(0, 0, 0, 0));//buy
         

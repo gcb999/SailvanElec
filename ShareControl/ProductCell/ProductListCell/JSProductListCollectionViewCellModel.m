@@ -24,18 +24,18 @@
         self.product_Discount=@"-80%";
         
 #pragma mark - 3: 标题
-        self.product_Title=@"标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试";
+        self.product_Title=@"标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题";
         
         
 #pragma mark - 4: color,size ,type
-        self.product_Color=@"";
+        self.product_Color=@"color:red";
         
-        self.product_Size=@"";
+        self.product_Size=@"size: xxlll";
         
-        self.product_Type=@"";
+        self.product_Type=@" type :ssss";
         
 #pragma mark -5: 数量
-        self.product_Quntity=@"";
+        self.product_Quntity=@"qty;2";
         
         
 #pragma mark - 6: 优惠价与原价
@@ -44,11 +44,11 @@
         
         
 #pragma mark -7：闪购时间和图片
-        self.is_FlashGo=NO;
+        self.is_FlashGo=YES;
         self.product_flashGo_Time=@"2016-06-3 03:07:10";
         
 #pragma mark -8:sold Out
-        self.is_SoldOut=NO;
+        self.is_SoldOut=YES;
         
         
 #pragma mark -9:免邮

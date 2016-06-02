@@ -10,7 +10,7 @@
 
 @implementation JSPlaceOrderCollectionViewCellModel
 
--(JSPlaceOrderCollectionViewCellModel *)initWithDic:(NSDictionary *)dic{
+-(instancetype)initWithDic:(NSDictionary *)dic{
     
     if (self=[super init]) {
         
@@ -54,10 +54,7 @@
 #pragma mark -9:免邮
         self.is_free_shipping=YES;
         
-        
-        
-        
-        
+ 
         
     }
     return self;
