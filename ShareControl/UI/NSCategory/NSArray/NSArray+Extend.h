@@ -33,4 +33,13 @@
  */
 -(NSArray *)arrayForMinusWithOtherArray:(NSArray *)otherArray;
 
+
+/**
+ *  得到A-Z 26位字母
+ */
++(NSArray *)arrayFor26LetterUpperGroups;
+
++(NSArray *)arrayFor26LetterLowerGroups;
+
+
 @end

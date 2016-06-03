@@ -10,7 +10,11 @@
 
 @protocol JSTableViewCellDelegate <NSObject>
 
+//单行
 -(void)JSTableViewController:(JSTableViewController *)JSCtrl   TableViewDateArr:(NSArray *)dateArr cellValue:(id)date indexPath:(NSIndexPath *)indexpath;
+
+//分组
+-(void)JSTableViewController:(JSTableViewController *)JSCtrl   sections:(NSArray *)sections rowsOfSections:(NSDictionary<NSString *,NSArray *> *)rowsOfSections indexPath:(NSIndexPath *)indexpath;
 
 
 

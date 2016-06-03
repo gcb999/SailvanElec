@@ -25,6 +25,8 @@
     self = [super init];
     if (self) {
         self.data=[NSMutableArray array];
+        self.sections=[NSMutableArray array];
+        self.rowsOfSectionDic=[NSMutableDictionary dictionary];
         _state=state;
         _cellClass=cellclass;
         self.delegate=delegate;
@@ -45,6 +47,8 @@
     [self setUpTableFooterView];
     _isFirstLoadPage=YES;
     [self.tableView registerClass:_cellClass forCellReuseIdentifier:KSWIdentifier];
+    
+  
       self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableView.showsVerticalScrollIndicator = NO;
 

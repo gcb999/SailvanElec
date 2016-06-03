@@ -91,5 +91,30 @@
     return minusArray;
 }
 
+/**
+ *  得到A-Z 26位大写字母
+ */
++(NSArray *)arrayFor26LetterUpperGroups{
+    NSMutableArray *mArrayPy=[[NSMutableArray alloc]init];
+    for(char c='A';c<='Z';c++){
+        NSString *s=[NSString stringWithFormat:@"%c",c];
+        [mArrayPy addObject:s];
+    }
+
+    return mArrayPy;
+}
+
+/**
+ *  得到A-Z 26位小写字母
+ */
++(NSArray *)arrayFor26LetterLowerGroups{
+    NSMutableArray *mArrayPy=[[NSMutableArray alloc]init];
+    for(char c='a';c<='z';c++){
+        NSString *s=[NSString stringWithFormat:@"%c",c];
+        [mArrayPy addObject:s];
+    }
+    
+    return mArrayPy;
+}
 
 @end

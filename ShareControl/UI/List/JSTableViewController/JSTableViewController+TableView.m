@@ -18,25 +18,54 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return 1;
+    return self.isStyleGrouped ? self.sections.count: 1;
+
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.data.count;
+    if (self.isStyleGrouped) {
+        
+        NSArray * array = self.rowsOfSectionDic[self.sections[section]];
+        return array.count;
+    }
+    else{
+       
+        return self.data.count;
+    }
+
+    
 }
+
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+     if (self.isStyleGrouped) {//是分组--只支持一个Cell
+         
+
+          self.JSTableViewCellDelegate=[tableView dequeueReusableCellWithIdentifier:KSWIdentifier forIndexPath:indexPath];
+
+         [self.JSTableViewCellDelegate JSTableViewController:self sections:self.sections rowsOfSections:self.rowsOfSectionDic indexPath:indexPath];
+         return (UITableViewCell *)self.JSTableViewCellDelegate;
+
+         
+     }
+     else{
+         
+         self.JSTableViewCellDelegate=[tableView dequeueReusableCellWithIdentifier:KSWIdentifier forIndexPath:indexPath];
+         id content=self.data[indexPath.row];
+         [self.JSTableViewCellDelegate JSTableViewController:self TableViewDateArr:self.data cellValue:content indexPath:indexPath];
+         return (UITableViewCell *)self.JSTableViewCellDelegate;
+         
+     }
     
-    self.JSTableViewCellDelegate=[tableView dequeueReusableCellWithIdentifier:KSWIdentifier forIndexPath:indexPath];
+
     
-    id content=self.data[indexPath.row];
-    [self.JSTableViewCellDelegate JSTableViewController:self TableViewDateArr:self.data cellValue:content indexPath:indexPath];
     
-    return (UITableViewCell *)self.JSTableViewCellDelegate;
+ 
 }
 
 
@@ -44,25 +73,24 @@
 #pragma mark -tableview delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(self.delegate==nil || ![self.delegate respondsToSelector:@selector(JSTableViewController:didSelectRowAtIndexPath:)]){
-        
+    if(self.delegate && [self.delegate respondsToSelector:@selector(JSTableViewController:didSelectRowAtIndexPath:)]){
+          [self.delegate JSTableViewController:self didSelectRowAtIndexPath:indexPath];
     }
-    else{
-        
-        [self.delegate JSTableViewController:self didSelectRowAtIndexPath:indexPath];
-        
-    }
+
     
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    if(self.delegate==nil || ![self.delegate respondsToSelector:@selector(JSTableViewController:heightForRowAtIndexPath:)]){
-        return 50;
+    if(self.delegate && [self.delegate respondsToSelector:@selector(JSTableViewController:heightForRowAtIndexPath:)]){
+       
+        return  [self.delegate JSTableViewController:self heightForRowAtIndexPath:indexPath];
+
     }
     else{
-        return  [self.delegate JSTableViewController:self heightForRowAtIndexPath:indexPath];
+        
+        return 50;
     }
 }
 
@@ -71,7 +99,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    if ([self.delegate respondsToSelector:@selector(JSTableViewController:viewForHeaderInSection:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(JSTableViewController:viewForHeaderInSection:)]) {
         
         return [self.delegate JSTableViewController:self viewForHeaderInSection:section];
     }
@@ -84,7 +112,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    if ([self.delegate respondsToSelector:@selector(JSTableViewController:heightForHeaderInSection:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(JSTableViewController:heightForHeaderInSection:)]) {
         return [self.delegate JSTableViewController:self heightForHeaderInSection:section];
     }
     else{

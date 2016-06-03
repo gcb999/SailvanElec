@@ -47,16 +47,30 @@ tableview 集成功能（暂时不考虑分组）
 
  */
 
+@protocol JSTableViewControllerDelegate,JSSectionTableViewDelegate,JSTableScrollViewDelegate,JSTableView3DTouchDelegate,JSTableViewHeadFooterDelegate;
+
 @interface JSTableViewController : UITableViewController<UIViewControllerPreviewingDelegate>
 
 
 
+#pragma mark -分组相关属性
+
+@property(nonatomic,assign)BOOL isStyleGrouped ;//是否分组 默认单行(NO)
+
+@property(nonatomic,strong)NSMutableArray *sections;//分组
+
+@property(nonatomic,strong)NSMutableDictionary<NSString *,NSArray *> *rowsOfSectionDic;//组对应列
+
+
+#pragma mark -共用属性
+
 @property(nonatomic,assign)NSInteger pageIndex;//页码
 
-@property(nonatomic,weak)id<JSTableViewControllerDelegate,JSTableScrollViewDelegate> delegate;//代理
 
 @property(nonatomic,strong)NSMutableArray *data;//数据源
 
+
+@property(nonatomic,weak)id<JSTableViewControllerDelegate> delegate;//代理
 
 @property(nonatomic,weak)id<JSTableViewCellDelegate> JSTableViewCellDelegate;//cell代理方法
 
@@ -83,8 +97,9 @@ tableview 集成功能（暂时不考虑分组）
 
 
 
+#pragma mark ----------------------------------代理方法-----------------------------------------
 
-@protocol JSTableViewControllerDelegate <JSTableScrollViewDelegate>
+@protocol JSTableViewControllerDelegate<JSSectionTableViewDelegate,JSTableScrollViewDelegate,JSTableView3DTouchDelegate,JSTableViewHeadFooterDelegate>
 
 
 // 网络加载
@@ -98,26 +113,58 @@ tableview 集成功能（暂时不考虑分组）
 -(CGFloat)JSTableViewController:(JSTableViewController *)JSCtrl heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 
+
+
+
 #pragma mark --------直接加头部和底部View-----------------
 
 -(UIView *)JSTableViewControllerWithViewForTableFooterView ;
 -(UIView *)JSTableViewControllerWithViewForTableHeaderView;
 
 
+@end
 
-#pragma mark -------分组头部-----------
 
+
+
+
+#pragma mark - TableView分组代理方法
+
+@protocol  JSSectionTableViewDelegate<NSObject>
+
+
+
+//1:Cell
+-(UITableViewCell *)JSTableViewController:(JSTableViewController *)JSCtrl cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
+
+
+
+
+
+
+#pragma mark -TableView头部与尾部
+@protocol  JSTableViewHeadFooterDelegate<NSObject>
+
+//1：头部
 -(UIView *)JSTableViewController:(JSTableViewController *)JSCtrl viewForHeaderInSection:(NSInteger)section;
-
 -(CGFloat)JSTableViewController:(JSTableViewController *)JSCtrl  heightForHeaderInSection:(NSInteger)section;
 
-
-#pragma mark -------分组底部-----------
+//2：底部
 -(UIView *)JSTableViewController:(JSTableViewController *)JSCtrl viewForFooterInSection:(NSInteger)section;
 -(CGFloat)JSTableViewController:(JSTableViewController *)JSCtrl  heightForFooterInSection:(NSInteger)section;
 
+@end
 
-#pragma mark --------3DTouch-----------------
+
+
+
+
+
+#pragma mark -TableViewJSTableView3DTouchDelegate
+@protocol  JSTableView3DTouchDelegate<NSObject>
 
 //Peek
 
@@ -130,6 +177,9 @@ tableview 集成功能（暂时不考虑分组）
 
 
 
+
+
+#pragma mark -TableViewJSTableView3DTouchDelegate
 @protocol JSTableScrollViewDelegate <NSObject>
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;                                               // any offset changes
@@ -158,6 +208,10 @@ tableview 集成功能（暂时不考虑分组）
 
 
 @end
+
+
+
+
 
 
 

@@ -12,6 +12,7 @@
 		9000CD861CFD67B5007C888D /* JSProductCollectionViewCellFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9000CD851CFD67B5007C888D /* JSProductCollectionViewCellFrameModel.m */; };
 		9000CD8E1CFD86F7007C888D /* JSDIYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9000CD8D1CFD86F7007C888D /* JSDIYButton.m */; };
 		900EDD241CF940A500E6FFB5 /* JSItemImgageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */; };
+		903B18461D017B04003E8B90 /* HotCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 903B18451D017B04003E8B90 /* HotCountryCell.m */; };
 		90405FF81CFBCA2A0050C056 /* JSItemImageViewTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */; };
 		904060001CFBD9040050C056 /* JSProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FFF1CFBD9040050C056 /* JSProductCollectionViewCell.m */; };
 		904060031CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060021CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m */; };
@@ -28,6 +29,11 @@
 		904C38A51CF59338004A8855 /* JSItemImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38A41CF59338004A8855 /* JSItemImageViewController.m */; };
 		904C38A81CF5AC22004A8855 /* JSBigItemImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C38A71CF5AC22004A8855 /* JSBigItemImageViewController.m */; };
 		905B84111CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B84101CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.m */; };
+		905B84151CFFDA70004062D7 /* MJNIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B84141CFFDA70004062D7 /* MJNIndexView.m */; };
+		905B84191CFFDB6F004062D7 /* JSCountryIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B84181CFFDB6F004062D7 /* JSCountryIndexViewController.m */; };
+		905B84251D000382004062D7 /* CountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B84241D000382004062D7 /* CountryModel.m */; };
+		905B84321D0034AE004062D7 /* address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 905B84311D0034AE004062D7 /* address.plist */; };
+		905B84351D00387F004062D7 /* CountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B84341D00387F004062D7 /* CountryCell.m */; };
 		907F80FD1CF2F6890023F98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FC1CF2F6890023F98B /* main.m */; };
 		907F81001CF2F6890023F98B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F80FF1CF2F6890023F98B /* AppDelegate.m */; };
 		907F81031CF2F6890023F98B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F81021CF2F6890023F98B /* ViewController.m */; };
@@ -152,6 +158,8 @@
 		9000CD8D1CFD86F7007C888D /* JSDIYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDIYButton.m; sourceTree = "<group>"; };
 		900EDD221CF940A500E6FFB5 /* JSItemImgageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImgageViewCell.h; sourceTree = "<group>"; };
 		900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImgageViewCell.m; sourceTree = "<group>"; };
+		903B18441D017B04003E8B90 /* HotCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCountryCell.h; sourceTree = "<group>"; };
+		903B18451D017B04003E8B90 /* HotCountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCountryCell.m; sourceTree = "<group>"; };
 		90405FF61CFBCA2A0050C056 /* JSItemImageViewTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImageViewTransition.h; sourceTree = "<group>"; };
 		90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImageViewTransition.m; sourceTree = "<group>"; };
 		90405FFE1CFBD9040050C056 /* JSProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductCollectionViewCell.h; sourceTree = "<group>"; };
@@ -184,6 +192,15 @@
 		904C38A71CF5AC22004A8855 /* JSBigItemImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBigItemImageViewController.m; sourceTree = "<group>"; };
 		905B840F1CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSBaseProductCollectionCellFrameModel+Layout.h"; sourceTree = "<group>"; };
 		905B84101CFFC5EA004062D7 /* JSBaseProductCollectionCellFrameModel+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSBaseProductCollectionCellFrameModel+Layout.m"; sourceTree = "<group>"; };
+		905B84131CFFDA70004062D7 /* MJNIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJNIndexView.h; sourceTree = "<group>"; };
+		905B84141CFFDA70004062D7 /* MJNIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJNIndexView.m; sourceTree = "<group>"; };
+		905B84171CFFDB6F004062D7 /* JSCountryIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCountryIndexViewController.h; sourceTree = "<group>"; };
+		905B84181CFFDB6F004062D7 /* JSCountryIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCountryIndexViewController.m; sourceTree = "<group>"; };
+		905B84231D000382004062D7 /* CountryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryModel.h; sourceTree = "<group>"; };
+		905B84241D000382004062D7 /* CountryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryModel.m; sourceTree = "<group>"; };
+		905B84311D0034AE004062D7 /* address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address.plist; sourceTree = "<group>"; };
+		905B84331D00387F004062D7 /* CountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryCell.h; sourceTree = "<group>"; };
+		905B84341D00387F004062D7 /* CountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryCell.m; sourceTree = "<group>"; };
 		907F80F81CF2F6890023F98B /* SailvanElec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SailvanElec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		907F80FC1CF2F6890023F98B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		907F80FE1CF2F6890023F98B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -547,6 +564,38 @@
 			path = JSItemImageViewController;
 			sourceTree = "<group>";
 		};
+		905B84121CFFDA70004062D7 /* MJNIndexView */ = {
+			isa = PBXGroup;
+			children = (
+				905B84131CFFDA70004062D7 /* MJNIndexView.h */,
+				905B84141CFFDA70004062D7 /* MJNIndexView.m */,
+			);
+			path = MJNIndexView;
+			sourceTree = "<group>";
+		};
+		905B84161CFFDB5C004062D7 /* JSCountryIndexViewController */ = {
+			isa = PBXGroup;
+			children = (
+				903B18441D017B04003E8B90 /* HotCountryCell.h */,
+				903B18451D017B04003E8B90 /* HotCountryCell.m */,
+				905B84311D0034AE004062D7 /* address.plist */,
+				905B84171CFFDB6F004062D7 /* JSCountryIndexViewController.h */,
+				905B84181CFFDB6F004062D7 /* JSCountryIndexViewController.m */,
+				905B84231D000382004062D7 /* CountryModel.h */,
+				905B84241D000382004062D7 /* CountryModel.m */,
+				905B84331D00387F004062D7 /* CountryCell.h */,
+				905B84341D00387F004062D7 /* CountryCell.m */,
+			);
+			path = JSCountryIndexViewController;
+			sourceTree = "<group>";
+		};
+		905B842A1D001156004062D7 /* JSTableGroupViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSTableGroupViewModel;
+			sourceTree = "<group>";
+		};
 		907F80EF1CF2F6890023F98B = {
 			isa = PBXGroup;
 			children = (
@@ -718,6 +767,8 @@
 		907F81511CF2F7C10023F98B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				905B84161CFFDB5C004062D7 /* JSCountryIndexViewController */,
+				905B84121CFFDA70004062D7 /* MJNIndexView */,
 				904C389F1CF592B9004A8855 /* JSItemImageViewController */,
 				907F82571CF3F12F0023F98B /* JSNavigationController */,
 				907F81521CF2F7C10023F98B /* JSBasicViewController */,
@@ -916,6 +967,7 @@
 		907F81891CF2F7C10023F98B /* JSTableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				905B842A1D001156004062D7 /* JSTableGroupViewModel */,
 				907F818A1CF2F7C10023F98B /* JSStretchableTableHeaderView */,
 				907F818D1CF2F7C10023F98B /* JSTableViewCellDelegate */,
 				907F818F1CF2F7C10023F98B /* JSTableViewController+MJRefresh.h */,
@@ -1407,6 +1459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				907F810B1CF2F6890023F98B /* LaunchScreen.storyboard in Resources */,
+				905B84321D0034AE004062D7 /* address.plist in Resources */,
 				907F81081CF2F6890023F98B /* Assets.xcassets in Resources */,
 				907F812F1CF2F6A70023F98B /* Podfile in Resources */,
 				907F81061CF2F6890023F98B /* Main.storyboard in Resources */,
@@ -1495,6 +1548,7 @@
 				907F824A1CF2F8470023F98B /* MainViewController.m in Sources */,
 				908057331CFE841B00635C87 /* JSProductListCollectionViewCellFrameModel.m in Sources */,
 				907F81FE1CF2F7C10023F98B /* AppDelegate+ThridDTouch.m in Sources */,
+				905B84351D00387F004062D7 /* CountryCell.m in Sources */,
 				904C38A51CF59338004A8855 /* JSItemImageViewController.m in Sources */,
 				904C389D1CF57812004A8855 /* HomeDetailVIewController.m in Sources */,
 				907F822C1CF2F7C10023F98B /* NSString+dateFromString.m in Sources */,
@@ -1508,6 +1562,7 @@
 				907F820E1CF2F7C10023F98B /* JSCollectionViewController+CollectionView.m in Sources */,
 				907F82201CF2F7C10023F98B /* JSTableViewController+ThreeDTouch.m in Sources */,
 				907F82051CF2F7C10023F98B /* JSNetWork.m in Sources */,
+				903B18461D017B04003E8B90 /* HotCountryCell.m in Sources */,
 				907F823A1CF2F7C10023F98B /* NSObject+UICateGory.m in Sources */,
 				907F821E1CF2F7C10023F98B /* JSTableViewController+TableHeaderFooter.m in Sources */,
 				907F821D1CF2F7C10023F98B /* JSTableViewController+StretchableTableHeaderView.m in Sources */,
@@ -1546,6 +1601,7 @@
 				907F82191CF2F7C10023F98B /* UITableView+CYLTableViewPlaceHolder.m in Sources */,
 				908057301CFE841000635C87 /* JSProductListCollectionViewCellModel.m in Sources */,
 				907F821F1CF2F7C10023F98B /* JSTableViewController+TableView.m in Sources */,
+				905B84151CFFDA70004062D7 /* MJNIndexView.m in Sources */,
 				904060001CFBD9040050C056 /* JSProductCollectionViewCell.m in Sources */,
 				908057371CFEC16E00635C87 /* JSBaseProductCollectionCell.m in Sources */,
 				9040600D1CFC36010050C056 /* PlaceOrderViewController.m in Sources */,
@@ -1573,6 +1629,7 @@
 				907F82441CF2F82C0023F98B /* LeftViewController.m in Sources */,
 				907F82181CF2F7C10023F98B /* UICollectionView+CYLTableViewPlaceHolder.m in Sources */,
 				907F82351CF2F7C10023F98B /* UIImage+FixOrientation.m in Sources */,
+				905B84251D000382004062D7 /* CountryModel.m in Sources */,
 				907F82531CF304140023F98B /* MainCollectionViewCell.m in Sources */,
 				907F820D1CF2F7C10023F98B /* JSTabBarControllerConfig.m in Sources */,
 				907F82041CF2F7C10023F98B /* JSNetWork+POST.m in Sources */,
@@ -1582,6 +1639,7 @@
 				9080572D1CFE83E100635C87 /* JSProductListCollectionViewCell.m in Sources */,
 				904060061CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m in Sources */,
 				907F82161CF2F7C10023F98B /* WeChatStylePlaceHolder.m in Sources */,
+				905B84191CFFDB6F004062D7 /* JSCountryIndexViewController.m in Sources */,
 				907F81001CF2F6890023F98B /* AppDelegate.m in Sources */,
 				907F82151CF2F7C10023F98B /* JSWaterFlowLayout.m in Sources */,
 				907F80FD1CF2F6890023F98B /* main.m in Sources */,

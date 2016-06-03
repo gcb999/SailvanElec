@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "MainCollectionViewCell.h"
 #import "JSNinaPagerViewConfig.h"
+#import "JSCountryIndexViewController.h"
 
 @interface MainViewController ()<JSCollectionViewControllerDelegate>
 {
@@ -40,7 +41,8 @@
     NSArray *titleArray =   @[
                               @"商品",
                               @"商品列表",
-                              @"PL"
+                              @"PL",
+                              @"国家"
                               ];
     
     
@@ -57,7 +59,8 @@
     NSArray *vcsArray = @[
                           @"HomeViewController",
                           @"JSProductProductListController",
-                          @"PlaceOrderViewController"
+                          @"PlaceOrderViewController",
+                          @"JSCountryIndexViewController"
                      
                           ];
     
