@@ -31,6 +31,7 @@ typedef enum {
 static NSString *const KSWIdentifier=@"JSTableViewController";
 
 
+
 /*
 
 tableview 集成功能（暂时不考虑分组）
@@ -51,11 +52,8 @@ tableview 集成功能（暂时不考虑分组）
 
 @interface JSTableViewController : UITableViewController<UIViewControllerPreviewingDelegate>
 
-
-
 #pragma mark -分组相关属性
 
-@property(nonatomic,assign)BOOL isStyleGrouped ;//是否分组 默认单行(NO)
 
 @property(nonatomic,strong)NSMutableArray *sections;//分组
 
@@ -134,6 +132,7 @@ tableview 集成功能（暂时不考虑分组）
 
 
 
+-(NSInteger)JSTableViewController:(JSTableViewController *)JSCtrl  numberOfRowsInSection:(NSInteger)section;
 //1:Cell
 -(UITableViewCell *)JSTableViewController:(JSTableViewController *)JSCtrl cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 

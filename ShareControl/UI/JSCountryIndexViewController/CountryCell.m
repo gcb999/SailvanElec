@@ -40,11 +40,10 @@
     return self;
 }
 
--(void)JSTableViewController:(JSTableViewController *)JSCtrl sections:(NSArray *)sections rowsOfSections:(NSDictionary<NSString *,NSArray *> *)rowsOfSections indexPath:(NSIndexPath *)indexpath{
+-(void)JSTableViewController:(JSTableViewController *)JSCtrl sections:(NSArray *)sections rowsOfSections:(NSDictionary<NSString *,NSArray *> *)rowsOfSections content:(id)content indexPath:(NSIndexPath *)indexpath{
     
-    NSString *str=sections[indexpath.section];
-    NSArray *tempArr=rowsOfSections[str];
-    CountryModel *model=tempArr[indexpath.row];
+
+    CountryModel *model=content;
     self.nameLabel.text=model.countryName;
     
 }

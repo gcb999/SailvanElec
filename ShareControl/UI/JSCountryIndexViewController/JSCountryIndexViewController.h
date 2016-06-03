@@ -8,11 +8,12 @@
 
 #import "JSBasicViewController.h"
 #import "MJNIndexView.h"
+#import "JSTableGroupViewController.h"
 
 @interface JSCountryIndexViewController : JSBasicViewController
 
 //热门数据源
-@property (nonatomic , strong)    JSTableViewController *ctrl;
+@property (nonatomic , strong)    JSTableGroupViewController *ctrl;
 
 // MJNIndexView
 @property (nonatomic, strong) MJNIndexView *indexView;//第三方索引

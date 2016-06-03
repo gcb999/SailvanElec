@@ -18,22 +18,13 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return self.isStyleGrouped ? self.sections.count: 1;
-
+    return  1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (self.isStyleGrouped) {
-        
-        NSArray * array = self.rowsOfSectionDic[self.sections[section]];
-        return array.count;
-    }
-    else{
-       
-        return self.data.count;
-    }
+    return self.data.count;
 
     
 }
@@ -43,29 +34,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-     if (self.isStyleGrouped) {//是分组--只支持一个Cell
-         
-
-          self.JSTableViewCellDelegate=[tableView dequeueReusableCellWithIdentifier:KSWIdentifier forIndexPath:indexPath];
-
-         [self.JSTableViewCellDelegate JSTableViewController:self sections:self.sections rowsOfSections:self.rowsOfSectionDic indexPath:indexPath];
-         return (UITableViewCell *)self.JSTableViewCellDelegate;
-
-         
-     }
-     else{
+ 
          
          self.JSTableViewCellDelegate=[tableView dequeueReusableCellWithIdentifier:KSWIdentifier forIndexPath:indexPath];
          id content=self.data[indexPath.row];
          [self.JSTableViewCellDelegate JSTableViewController:self TableViewDateArr:self.data cellValue:content indexPath:indexPath];
          return (UITableViewCell *)self.JSTableViewCellDelegate;
          
-     }
-    
 
-    
-    
- 
 }
 
 

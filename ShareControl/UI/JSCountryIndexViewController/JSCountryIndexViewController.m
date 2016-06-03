@@ -31,8 +31,7 @@
     [super viewDidLoad];
   
     //列表
-    self.ctrl=[[JSTableViewController alloc] initWithState:JSTableViewPullHeader tableViewCellClass:[CountryCell class] delegate:self];
-    self.ctrl.isStyleGrouped=YES;
+    self.ctrl=[[JSTableGroupViewController alloc] initWithState:JSTableViewPullHeader tableViewCellClass:nil delegate:self];
     self.ctrl.view.frame=self.view.bounds;
     [self.view addSubview:self.ctrl.view];
     [self addChildViewController:self.ctrl];
@@ -112,7 +111,7 @@
         [dic setObject:groupArray forKey:self.ctrl.sections[i]];
     }
   
-//    [dic setObject:hotArray forKey:@"hot"];
+   [dic setObject:hotArray forKey:@"hot"];
     [self.ctrl.rowsOfSectionDic addEntriesFromDictionary:dic];
     
 
@@ -151,7 +150,7 @@
     [self.ctrl reloadHeader];
     [self.ctrl.tableView reloadSectionIndexTitles];
     [self.indexView refreshIndexItems];
-//   [self.ctrl.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+   [self.ctrl.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 #pragma mark MJMIndexForTableView datasource methods
@@ -161,12 +160,46 @@
 }
 - (void)sectionForSectionMJNIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
-    if (index==0) {
-        index=1;
-    }
+   
     [self.ctrl.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:index] atScrollPosition: UITableViewScrollPositionTop animated:YES];
 }
+-(NSInteger)JSTableViewController:(JSTableViewController *)JSCtrl numberOfRowsInSection:(NSInteger)section{
+    
+    if (section==0) {
+        return 1;
+    }
+    
+    NSArray * array = JSCtrl.rowsOfSectionDic[JSCtrl.sections[section]];
+    return array.count;
+}
 
+-(UITableViewCell *)JSTableViewController:(JSTableViewController *)JSCtrl cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section==0) {
+        
+        static NSString * ID = @"hotCountry";
+        HotCountryCell * cell = [JSCtrl.tableView dequeueReusableCellWithIdentifier:ID];
+        if (!cell) {
+            cell = [[HotCountryCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        }
+        cell.hotArray = JSCtrl.rowsOfSectionDic[@"hot"];
+        return cell;
+        
+    }
+    else{
+        static NSString * ID = @"hotCountry1";
+        id<JSTableViewCellDelegate> cell = [JSCtrl.tableView dequeueReusableCellWithIdentifier:ID];
+        if (!cell) {
+            cell = [[CountryCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        }
+        NSString *str= JSCtrl.sections[indexPath.section];
+        id content=JSCtrl.rowsOfSectionDic[str][indexPath.row];
+        [cell JSTableViewController:JSCtrl sections:JSCtrl.sections rowsOfSections:JSCtrl.rowsOfSectionDic content:content indexPath:indexPath];
+        return (UITableViewCell *)cell;
+        
+    }
+    
+}
 
 
 //对section样式和内容修改
@@ -191,10 +224,19 @@
 
 
 //返回行间距
+-(CGFloat)JSTableViewController:(JSTableViewController *)JSCtrl heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 100.0f;
+    }else
+    {
+        return 48.0f;
+    }
+}
+
 -(CGFloat)JSTableViewController:(JSTableViewController *)JSCtrl heightForHeaderInSection:(NSInteger)section{
 
     if (section == 0) {
-        return 80;
+        return 0;
     }else{
         return 20.0f;
     }

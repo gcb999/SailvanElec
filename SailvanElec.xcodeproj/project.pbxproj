@@ -13,6 +13,7 @@
 		9000CD8E1CFD86F7007C888D /* JSDIYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9000CD8D1CFD86F7007C888D /* JSDIYButton.m */; };
 		900EDD241CF940A500E6FFB5 /* JSItemImgageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */; };
 		903B18461D017B04003E8B90 /* HotCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 903B18451D017B04003E8B90 /* HotCountryCell.m */; };
+		903B184B1D017DE9003E8B90 /* JSTableGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903B184A1D017DE9003E8B90 /* JSTableGroupViewController.m */; };
 		90405FF81CFBCA2A0050C056 /* JSItemImageViewTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */; };
 		904060001CFBD9040050C056 /* JSProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90405FFF1CFBD9040050C056 /* JSProductCollectionViewCell.m */; };
 		904060031CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 904060021CFC0D110050C056 /* JSPlaceOrderCollectionViewCell.m */; };
@@ -160,6 +161,8 @@
 		900EDD231CF940A500E6FFB5 /* JSItemImgageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImgageViewCell.m; sourceTree = "<group>"; };
 		903B18441D017B04003E8B90 /* HotCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCountryCell.h; sourceTree = "<group>"; };
 		903B18451D017B04003E8B90 /* HotCountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCountryCell.m; sourceTree = "<group>"; };
+		903B18491D017DE9003E8B90 /* JSTableGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTableGroupViewController.h; sourceTree = "<group>"; };
+		903B184A1D017DE9003E8B90 /* JSTableGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTableGroupViewController.m; sourceTree = "<group>"; };
 		90405FF61CFBCA2A0050C056 /* JSItemImageViewTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemImageViewTransition.h; sourceTree = "<group>"; };
 		90405FF71CFBCA2A0050C056 /* JSItemImageViewTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemImageViewTransition.m; sourceTree = "<group>"; };
 		90405FFE1CFBD9040050C056 /* JSProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProductCollectionViewCell.h; sourceTree = "<group>"; };
@@ -453,6 +456,15 @@
 				9000CD8D1CFD86F7007C888D /* JSDIYButton.m */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		903B18481D017DBF003E8B90 /* JSTableGroupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				903B18491D017DE9003E8B90 /* JSTableGroupViewController.h */,
+				903B184A1D017DE9003E8B90 /* JSTableGroupViewController.m */,
+			);
+			path = JSTableGroupViewController;
 			sourceTree = "<group>";
 		};
 		90405FF91CFBD8950050C056 /* ProductCell */ = {
@@ -826,6 +838,7 @@
 		907F81601CF2F7C10023F98B /* List */ = {
 			isa = PBXGroup;
 			children = (
+				903B18481D017DBF003E8B90 /* JSTableGroupViewController */,
 				907F81611CF2F7C10023F98B /* JSCollectionViewController */,
 				907F81791CF2F7C10023F98B /* JSListEmptyView */,
 				907F81891CF2F7C10023F98B /* JSTableViewController */,
@@ -1639,6 +1652,7 @@
 				9080572D1CFE83E100635C87 /* JSProductListCollectionViewCell.m in Sources */,
 				904060061CFC13BC0050C056 /* JSPlaceOrderCollectionViewCellModel.m in Sources */,
 				907F82161CF2F7C10023F98B /* WeChatStylePlaceHolder.m in Sources */,
+				903B184B1D017DE9003E8B90 /* JSTableGroupViewController.m in Sources */,
 				905B84191CFFDB6F004062D7 /* JSCountryIndexViewController.m in Sources */,
 				907F81001CF2F6890023F98B /* AppDelegate.m in Sources */,
 				907F82151CF2F7C10023F98B /* JSWaterFlowLayout.m in Sources */,
