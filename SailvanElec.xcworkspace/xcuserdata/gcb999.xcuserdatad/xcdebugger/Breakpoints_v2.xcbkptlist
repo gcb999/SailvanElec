@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShareControl/UI/JSCountryIndexViewController/JSCountryIndexViewController.m"
-            timestampString = "486637617.6656"
+            timestampString = "486641282.518568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-getData"
             landmarkType = "5">
          </BreakpointContent>

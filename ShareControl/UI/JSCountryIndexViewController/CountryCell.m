@@ -15,6 +15,7 @@
 @property (nonatomic , strong) UIImageView *bgImgView;
 @property (nonatomic , strong) UIImageView *iconImgView;
 @property (nonatomic , strong) UILabel *nameLabel;
+@property (nonatomic , strong) UILabel *lineLabel;
 @end
 
 
@@ -35,6 +36,12 @@
         self.nameLabel=[UILabel LabWithFrame:CGRectZero text:@"" textColor:[UIColor blackColor] textAlign:NSTextAlignmentLeft  font:KNormalFontSize];
         [self.bgImgView addSubview:self.nameLabel];
 
+        //线
+        self.lineLabel=[UILabel LabWithFrame:CGRectZero text:@"" textColor:[UIColor blackColor] textAlign:NSTextAlignmentLeft  font:KNormalFontSize];
+        self.lineLabel.layer.borderColor=KborderColor.CGColor;
+        self.lineLabel.layer.borderWidth=0.5f;
+        [self.contentView addSubview:self.lineLabel];
+        
         
     }
     return self;
@@ -54,11 +61,10 @@
     [super layoutSubviews];
     
     CGRect hrect,rect=self.contentView.bounds;
-    
-
+    rect=UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(0, 0, 0, 1));
+ 
     if (IS_NSString(self.model.iconUrl)) {//有图标
         
-       
         CGRectDivide(rect, &hrect, &rect, 40, CGRectMinXEdge);
         
         CGSize size=CGSizeMake(30, 30);
@@ -79,6 +85,7 @@
          self.nameLabel.frame=UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(0, 5, 0, 0));
     }
     
+    self.lineLabel.frame=CGRectMake(0, self.contentView.bounds.size.height-2, self.contentView.bounds.size.width-20, 1);
 
     
 }

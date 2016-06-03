@@ -32,6 +32,7 @@
   
     //列表
     self.ctrl=[[JSTableGroupViewController alloc] initWithState:JSTableViewPullHeader tableViewCellClass:nil delegate:self];
+    self.ctrl.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     self.ctrl.view.frame=self.view.bounds;
     [self.view addSubview:self.ctrl.view];
     [self addChildViewController:self.ctrl];
@@ -163,6 +164,9 @@
    
     [self.ctrl.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:index] atScrollPosition: UITableViewScrollPositionTop animated:YES];
 }
+
+#pragma mark -代理方法
+
 -(NSInteger)JSTableViewController:(JSTableViewController *)JSCtrl numberOfRowsInSection:(NSInteger)section{
     
     if (section==0) {
@@ -172,6 +176,7 @@
     NSArray * array = JSCtrl.rowsOfSectionDic[JSCtrl.sections[section]];
     return array.count;
 }
+
 
 -(UITableViewCell *)JSTableViewController:(JSTableViewController *)JSCtrl cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
